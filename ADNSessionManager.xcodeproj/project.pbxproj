@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BDD37A4169BEA04009B0CC6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */; };
+		5BDD37AE169BEA04009B0CC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BDD37AC169BEA04009B0CC6 /* InfoPlist.strings */; };
+		5BDD37B2169BEA04009B0CC6 /* ADNSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD37B1169BEA04009B0CC6 /* ADNSessionManager.m */; };
+		5BDD37BA169BEA04009B0CC6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37B9169BEA04009B0CC6 /* SenTestingKit.framework */; };
+		5BDD37BB169BEA04009B0CC6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */; };
+		5BDD37BE169BEA04009B0CC6 /* ADNSessionManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37A0169BEA04009B0CC6 /* ADNSessionManager.framework */; };
+		5BDD37C4169BEA04009B0CC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BDD37C2169BEA04009B0CC6 /* InfoPlist.strings */; };
+		5BDD37C7169BEA04009B0CC6 /* ADNSessionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD37C6169BEA04009B0CC6 /* ADNSessionManagerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BDD37BC169BEA04009B0CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BDD3797169BEA04009B0CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BDD379F169BEA04009B0CC6;
+			remoteInfo = ADNSessionManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5BDD37A0169BEA04009B0CC6 /* ADNSessionManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ADNSessionManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5BDD37A6169BEA04009B0CC6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5BDD37A7169BEA04009B0CC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5BDD37A8169BEA04009B0CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BDD37AB169BEA04009B0CC6 /* ADNSessionManager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADNSessionManager-Info.plist"; sourceTree = "<group>"; };
+		5BDD37AD169BEA04009B0CC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BDD37AF169BEA04009B0CC6 /* ADNSessionManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ADNSessionManager-Prefix.pch"; sourceTree = "<group>"; };
+		5BDD37B0169BEA04009B0CC6 /* ADNSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADNSessionManager.h; sourceTree = "<group>"; };
+		5BDD37B1169BEA04009B0CC6 /* ADNSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADNSessionManager.m; sourceTree = "<group>"; };
+		5BDD37B8169BEA04009B0CC6 /* ADNSessionManagerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNSessionManagerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDD37B9169BEA04009B0CC6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5BDD37C1169BEA04009B0CC6 /* ADNSessionManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADNSessionManagerTests-Info.plist"; sourceTree = "<group>"; };
+		5BDD37C3169BEA04009B0CC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BDD37C5169BEA04009B0CC6 /* ADNSessionManagerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADNSessionManagerTests.h; sourceTree = "<group>"; };
+		5BDD37C6169BEA04009B0CC6 /* ADNSessionManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADNSessionManagerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BDD379C169BEA04009B0CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDD37A4169BEA04009B0CC6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BDD37B4169BEA04009B0CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDD37BA169BEA04009B0CC6 /* SenTestingKit.framework in Frameworks */,
+				5BDD37BB169BEA04009B0CC6 /* Cocoa.framework in Frameworks */,
+				5BDD37BE169BEA04009B0CC6 /* ADNSessionManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BDD3796169BEA04009B0CC6 = {
+			isa = PBXGroup;
+			children = (
+				5BDD37A9169BEA04009B0CC6 /* ADNSessionManager */,
+				5BDD37BF169BEA04009B0CC6 /* ADNSessionManagerTests */,
+				5BDD37A2169BEA04009B0CC6 /* Frameworks */,
+				5BDD37A1169BEA04009B0CC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BDD37A1169BEA04009B0CC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD37A0169BEA04009B0CC6 /* ADNSessionManager.framework */,
+				5BDD37B8169BEA04009B0CC6 /* ADNSessionManagerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BDD37A2169BEA04009B0CC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */,
+				5BDD37B9169BEA04009B0CC6 /* SenTestingKit.framework */,
+				5BDD37A5169BEA04009B0CC6 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BDD37A5169BEA04009B0CC6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD37A6169BEA04009B0CC6 /* AppKit.framework */,
+				5BDD37A7169BEA04009B0CC6 /* CoreData.framework */,
+				5BDD37A8169BEA04009B0CC6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5BDD37A9169BEA04009B0CC6 /* ADNSessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD37B0169BEA04009B0CC6 /* ADNSessionManager.h */,
+				5BDD37B1169BEA04009B0CC6 /* ADNSessionManager.m */,
+				5BDD37AA169BEA04009B0CC6 /* Supporting Files */,
+			);
+			path = ADNSessionManager;
+			sourceTree = "<group>";
+		};
+		5BDD37AA169BEA04009B0CC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD37AB169BEA04009B0CC6 /* ADNSessionManager-Info.plist */,
+				5BDD37AC169BEA04009B0CC6 /* InfoPlist.strings */,
+				5BDD37AF169BEA04009B0CC6 /* ADNSessionManager-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BDD37BF169BEA04009B0CC6 /* ADNSessionManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD37C5169BEA04009B0CC6 /* ADNSessionManagerTests.h */,
+				5BDD37C6169BEA04009B0CC6 /* ADNSessionManagerTests.m */,
+				5BDD37C0169BEA04009B0CC6 /* Supporting Files */,
+			);
+			path = ADNSessionManagerTests;
+			sourceTree = "<group>";
+		};
+		5BDD37C0169BEA04009B0CC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD37C1169BEA04009B0CC6 /* ADNSessionManagerTests-Info.plist */,
+				5BDD37C2169BEA04009B0CC6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5BDD379D169BEA04009B0CC6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5BDD379F169BEA04009B0CC6 /* ADNSessionManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BDD37CA169BEA04009B0CC6 /* Build configuration list for PBXNativeTarget "ADNSessionManager" */;
+			buildPhases = (
+				5BDD379B169BEA04009B0CC6 /* Sources */,
+				5BDD379C169BEA04009B0CC6 /* Frameworks */,
+				5BDD379D169BEA04009B0CC6 /* Headers */,
+				5BDD379E169BEA04009B0CC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ADNSessionManager;
+			productName = ADNSessionManager;
+			productReference = 5BDD37A0169BEA04009B0CC6 /* ADNSessionManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5BDD37B7169BEA04009B0CC6 /* ADNSessionManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BDD37CD169BEA04009B0CC6 /* Build configuration list for PBXNativeTarget "ADNSessionManagerTests" */;
+			buildPhases = (
+				5BDD37B3169BEA04009B0CC6 /* Sources */,
+				5BDD37B4169BEA04009B0CC6 /* Frameworks */,
+				5BDD37B5169BEA04009B0CC6 /* Resources */,
+				5BDD37B6169BEA04009B0CC6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BDD37BD169BEA04009B0CC6 /* PBXTargetDependency */,
+			);
+			name = ADNSessionManagerTests;
+			productName = ADNSessionManagerTests;
+			productReference = 5BDD37B8169BEA04009B0CC6 /* ADNSessionManagerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BDD3797169BEA04009B0CC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Pilgrimage Software";
+			};
+			buildConfigurationList = 5BDD379A169BEA04009B0CC6 /* Build configuration list for PBXProject "ADNSessionManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5BDD3796169BEA04009B0CC6;
+			productRefGroup = 5BDD37A1169BEA04009B0CC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BDD379F169BEA04009B0CC6 /* ADNSessionManager */,
+				5BDD37B7169BEA04009B0CC6 /* ADNSessionManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BDD379E169BEA04009B0CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDD37AE169BEA04009B0CC6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BDD37B5169BEA04009B0CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDD37C4169BEA04009B0CC6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BDD37B6169BEA04009B0CC6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BDD379B169BEA04009B0CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDD37B2169BEA04009B0CC6 /* ADNSessionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BDD37B3169BEA04009B0CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDD37C7169BEA04009B0CC6 /* ADNSessionManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BDD37BD169BEA04009B0CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BDD379F169BEA04009B0CC6 /* ADNSessionManager */;
+			targetProxy = 5BDD37BC169BEA04009B0CC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BDD37AC169BEA04009B0CC6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BDD37AD169BEA04009B0CC6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5BDD37C2169BEA04009B0CC6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BDD37C3169BEA04009B0CC6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BDD37C8169BEA04009B0CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5BDD37C9169BEA04009B0CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5BDD37CB169BEA04009B0CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ADNSessionManager/ADNSessionManager-Prefix.pch";
+				INFOPLIST_FILE = "ADNSessionManager/ADNSessionManager-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		5BDD37CC169BEA04009B0CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ADNSessionManager/ADNSessionManager-Prefix.pch";
+				INFOPLIST_FILE = "ADNSessionManager/ADNSessionManager-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		5BDD37CE169BEA04009B0CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ADNSessionManager/ADNSessionManager-Prefix.pch";
+				INFOPLIST_FILE = "ADNSessionManagerTests/ADNSessionManagerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5BDD37CF169BEA04009B0CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ADNSessionManager/ADNSessionManager-Prefix.pch";
+				INFOPLIST_FILE = "ADNSessionManagerTests/ADNSessionManagerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BDD379A169BEA04009B0CC6 /* Build configuration list for PBXProject "ADNSessionManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BDD37C8169BEA04009B0CC6 /* Debug */,
+				5BDD37C9169BEA04009B0CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BDD37CA169BEA04009B0CC6 /* Build configuration list for PBXNativeTarget "ADNSessionManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BDD37CB169BEA04009B0CC6 /* Debug */,
+				5BDD37CC169BEA04009B0CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BDD37CD169BEA04009B0CC6 /* Build configuration list for PBXNativeTarget "ADNSessionManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BDD37CE169BEA04009B0CC6 /* Debug */,
+				5BDD37CF169BEA04009B0CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BDD3797169BEA04009B0CC6 /* Project object */;
+}
