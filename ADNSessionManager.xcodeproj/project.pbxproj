@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B8F1BFB1875EF5D00E03D42 /* ADNSessionManager-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F1BF51875EF5D00E03D42 /* ADNSessionManager-Info.plist */; };
+		5B8F1BFC1875EF5D00E03D42 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F1BF61875EF5D00E03D42 /* InfoPlist.strings */; };
+		5B8F1BFD1875EF5D00E03D42 /* ADNSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B8F1BF91875EF5D00E03D42 /* ADNSessionManager.h */; };
+		5B8F1BFE1875EF5D00E03D42 /* ADNSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F1BFA1875EF5D00E03D42 /* ADNSessionManager.m */; };
 		5BDD37A4169BEA04009B0CC6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */; };
-		5BDD37AE169BEA04009B0CC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BDD37AC169BEA04009B0CC6 /* InfoPlist.strings */; };
-		5BDD37B2169BEA04009B0CC6 /* ADNSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD37B1169BEA04009B0CC6 /* ADNSessionManager.m */; };
 		5BDD37BA169BEA04009B0CC6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37B9169BEA04009B0CC6 /* SenTestingKit.framework */; };
 		5BDD37BB169BEA04009B0CC6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */; };
 		5BDD37BE169BEA04009B0CC6 /* ADNSessionManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37A0169BEA04009B0CC6 /* ADNSessionManager.framework */; };
@@ -28,16 +30,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B8F1BF51875EF5D00E03D42 /* ADNSessionManager-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ADNSessionManager-Info.plist"; sourceTree = "<group>"; };
+		5B8F1BF71875EF5D00E03D42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B8F1BF91875EF5D00E03D42 /* ADNSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADNSessionManager.h; sourceTree = "<group>"; };
+		5B8F1BFA1875EF5D00E03D42 /* ADNSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADNSessionManager.m; sourceTree = "<group>"; };
 		5BDD37A0169BEA04009B0CC6 /* ADNSessionManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ADNSessionManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5BDD37A6169BEA04009B0CC6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5BDD37A7169BEA04009B0CC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5BDD37A8169BEA04009B0CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5BDD37AB169BEA04009B0CC6 /* ADNSessionManager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADNSessionManager-Info.plist"; sourceTree = "<group>"; };
-		5BDD37AD169BEA04009B0CC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5BDD37AF169BEA04009B0CC6 /* ADNSessionManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ADNSessionManager-Prefix.pch"; sourceTree = "<group>"; };
-		5BDD37B0169BEA04009B0CC6 /* ADNSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADNSessionManager.h; sourceTree = "<group>"; };
-		5BDD37B1169BEA04009B0CC6 /* ADNSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADNSessionManager.m; sourceTree = "<group>"; };
 		5BDD37B8169BEA04009B0CC6 /* ADNSessionManagerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNSessionManagerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDD37B9169BEA04009B0CC6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5BDD37C1169BEA04009B0CC6 /* ADNSessionManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADNSessionManagerTests-Info.plist"; sourceTree = "<group>"; };
@@ -68,6 +69,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B8F1BF41875EF5D00E03D42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B8F1BF51875EF5D00E03D42 /* ADNSessionManager-Info.plist */,
+				5B8F1BF61875EF5D00E03D42 /* InfoPlist.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B8F1BF81875EF5D00E03D42 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5B8F1BF91875EF5D00E03D42 /* ADNSessionManager.h */,
+				5B8F1BFA1875EF5D00E03D42 /* ADNSessionManager.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		5BDD3796169BEA04009B0CC6 = {
 			isa = PBXGroup;
 			children = (
@@ -110,21 +129,10 @@
 		5BDD37A9169BEA04009B0CC6 /* ADNSessionManager */ = {
 			isa = PBXGroup;
 			children = (
-				5BDD37B0169BEA04009B0CC6 /* ADNSessionManager.h */,
-				5BDD37B1169BEA04009B0CC6 /* ADNSessionManager.m */,
-				5BDD37AA169BEA04009B0CC6 /* Supporting Files */,
+				5B8F1BF41875EF5D00E03D42 /* Resources */,
+				5B8F1BF81875EF5D00E03D42 /* Source */,
 			);
 			path = ADNSessionManager;
-			sourceTree = "<group>";
-		};
-		5BDD37AA169BEA04009B0CC6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5BDD37AB169BEA04009B0CC6 /* ADNSessionManager-Info.plist */,
-				5BDD37AC169BEA04009B0CC6 /* InfoPlist.strings */,
-				5BDD37AF169BEA04009B0CC6 /* ADNSessionManager-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		5BDD37BF169BEA04009B0CC6 /* ADNSessionManagerTests */ = {
@@ -153,6 +161,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8F1BFD1875EF5D00E03D42 /* ADNSessionManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BDD37AE169BEA04009B0CC6 /* InfoPlist.strings in Resources */,
+				5B8F1BFB1875EF5D00E03D42 /* ADNSessionManager-Info.plist in Resources */,
+				5B8F1BFC1875EF5D00E03D42 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BDD37B2169BEA04009B0CC6 /* ADNSessionManager.m in Sources */,
+				5B8F1BFE1875EF5D00E03D42 /* ADNSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,10 +296,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5BDD37AC169BEA04009B0CC6 /* InfoPlist.strings */ = {
+		5B8F1BF61875EF5D00E03D42 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5BDD37AD169BEA04009B0CC6 /* en */,
+				5B8F1BF71875EF5D00E03D42 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -439,6 +449,7 @@
 				5BDD37CC169BEA04009B0CC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BDD37CD169BEA04009B0CC6 /* Build configuration list for PBXNativeTarget "ADNSessionManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +458,7 @@
 				5BDD37CF169BEA04009B0CC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
