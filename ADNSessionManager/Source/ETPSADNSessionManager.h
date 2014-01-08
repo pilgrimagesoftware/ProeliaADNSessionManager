@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ProeliaSDK/ETKSSessionManager.h>
 
 
-@interface ADNSessionManager : NSObject
+@interface ETPSADNSessionManager : NSObject <ETKSSessionManager>
 
 @end

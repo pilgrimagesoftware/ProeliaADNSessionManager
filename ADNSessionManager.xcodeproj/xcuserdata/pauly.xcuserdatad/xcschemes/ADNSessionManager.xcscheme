@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5BDD379F169BEA04009B0CC6"
-               BuildableName = "ADNSessionManager.framework"
+               BlueprintIdentifier = "5BB63F32187CFFEA00461CCE"
+               BuildableName = "ADNSessionManager.bundle"
                BlueprintName = "ADNSessionManager"
                ReferencedContainer = "container:ADNSessionManager.xcodeproj">
             </BuildableReference>
@@ -32,8 +32,8 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5BDD37B7169BEA04009B0CC6"
-               BuildableName = "ADNSessionManagerTests.octest"
+               BlueprintIdentifier = "5BB63F42187D002700461CCE"
+               BuildableName = "ADNSessionManagerTests.xctest"
                BlueprintName = "ADNSessionManagerTests"
                ReferencedContainer = "container:ADNSessionManager.xcodeproj">
             </BuildableReference>
