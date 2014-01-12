@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ETPSALoginViewController">
+            <connections>
+                <outlet property="adnLogoImageView" destination="Mt2-rF-QKC" id="OG6-do-IPE"/>
+                <outlet property="appLogoImageView" destination="uNF-lD-b4b" id="YqC-5c-jTg"/>
+                <outlet property="loginButton" destination="b4h-JL-aSA" id="qOe-5W-NU8"/>
+                <outlet property="loginLabel" destination="OO3-h9-3hR" id="326-1w-M5l"/>
+                <outlet property="passwordBackingView" destination="7BF-I6-WJZ" id="shf-Pi-z9u"/>
+                <outlet property="passwordField" destination="hTB-is-QiZ" id="0Uu-hk-fZb"/>
+                <outlet property="usernameBackingView" destination="75D-qT-WoG" id="EI3-pz-caB"/>
+                <outlet property="usernameField" destination="qbE-8o-arn" id="0H3-DO-kEC"/>
+                <outlet property="view" destination="pno-9H-141" id="xVo-GP-UlV"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <view id="pno-9H-141">
+            <rect key="frame" x="0.0" y="0.0" width="512" height="170"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uNF-lD-b4b" userLabel="Proelia Logo">
+                    <rect key="frame" x="20" y="35" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="7Z8-n5-WLF"/>
+                        <constraint firstAttribute="height" constant="100" id="AjB-yF-XME"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="proelia-icon" id="QR1-D9-eLt"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mt2-rF-QKC" userLabel="App.net Logo">
+                    <rect key="frame" x="392" y="35" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="CmE-ZM-Zde"/>
+                        <constraint firstAttribute="width" constant="100" id="OcL-7l-6cW"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="adn" id="5eM-lf-apd"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OO3-h9-3hR">
+                    <rect key="frame" x="18" y="120" width="476" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="K7g-Ps-7r1"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="Login to App.net" id="iRE-kz-fU0">
+                        <font key="font" metaFont="system" size="24"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="75D-qT-WoG" customClass="PSBorderedContainerView">
+                    <rect key="frame" x="128" y="86" width="256" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-8o-arn" userLabel="Username">
+                            <rect key="frame" x="8" y="4" width="240" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="Username or email" id="nZf-ie-27E">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                            <connections>
+                                <action selector="inputChanged:" target="-2" id="atl-Ef-eJ9"/>
+                                <outlet property="delegate" destination="-2" id="DXb-Jo-fLm"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="qbE-8o-arn" firstAttribute="leading" secondItem="75D-qT-WoG" secondAttribute="leading" constant="10" id="afs-WW-4Ol"/>
+                        <constraint firstItem="qbE-8o-arn" firstAttribute="top" secondItem="75D-qT-WoG" secondAttribute="top" constant="4" id="fWX-nG-JDJ"/>
+                        <constraint firstAttribute="trailing" secondItem="qbE-8o-arn" secondAttribute="trailing" constant="10" id="phU-5j-I3K"/>
+                        <constraint firstAttribute="height" constant="30" id="qHR-8h-IJm"/>
+                        <constraint firstAttribute="bottom" secondItem="qbE-8o-arn" secondAttribute="bottom" constant="4" id="qx3-F5-yRQ"/>
+                    </constraints>
+                </customView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="7BF-I6-WJZ" customClass="PSBorderedContainerView">
+                    <rect key="frame" x="128" y="48" width="256" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <secureTextField focusRingType="none" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTB-is-QiZ" userLabel="Password">
+                            <rect key="frame" x="8" y="6" width="240" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="center" placeholderString="Password" usesSingleLineMode="YES" id="796-yP-LJZ">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <allowedInputSourceLocales>
+                                    <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                </allowedInputSourceLocales>
+                            </secureTextFieldCell>
+                            <connections>
+                                <action selector="inputChanged:" target="-2" id="WH4-u0-FpP"/>
+                                <outlet property="delegate" destination="-2" id="Cfu-67-Mry"/>
+                            </connections>
+                        </secureTextField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="5LA-Ti-rlL"/>
+                        <constraint firstAttribute="bottom" secondItem="hTB-is-QiZ" secondAttribute="bottom" constant="4" id="GFN-Ym-Xlq"/>
+                        <constraint firstAttribute="trailing" secondItem="hTB-is-QiZ" secondAttribute="trailing" constant="10" id="r03-BH-cTc"/>
+                        <constraint firstItem="hTB-is-QiZ" firstAttribute="leading" secondItem="7BF-I6-WJZ" secondAttribute="leading" constant="10" id="rxv-O1-fCf"/>
+                        <constraint firstItem="hTB-is-QiZ" firstAttribute="top" secondItem="7BF-I6-WJZ" secondAttribute="top" constant="4" id="zVX-MW-SNr"/>
+                    </constraints>
+                </customView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b4h-JL-aSA">
+                    <rect key="frame" x="122" y="8" width="268" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="yel-Au-kjd"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Mmc-Z8-gkm">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="loginButtonClicked:" target="-2" id="7Tb-AG-S4l"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="uNF-lD-b4b" firstAttribute="leading" secondItem="pno-9H-141" secondAttribute="leading" constant="20" symbolic="YES" id="3tQ-HZ-rpM"/>
+                <constraint firstItem="Mt2-rF-QKC" firstAttribute="leading" secondItem="75D-qT-WoG" secondAttribute="trailing" constant="8" symbolic="YES" id="CcA-x7-3tr"/>
+                <constraint firstItem="7BF-I6-WJZ" firstAttribute="trailing" secondItem="b4h-JL-aSA" secondAttribute="trailing" id="DGI-V6-Sep"/>
+                <constraint firstAttribute="centerY" secondItem="uNF-lD-b4b" secondAttribute="centerY" id="FY9-ze-Xp0"/>
+                <constraint firstAttribute="trailing" secondItem="Mt2-rF-QKC" secondAttribute="trailing" constant="20" id="I0O-Go-6sc"/>
+                <constraint firstItem="75D-qT-WoG" firstAttribute="top" secondItem="OO3-h9-3hR" secondAttribute="bottom" constant="4" id="U2E-Ov-kKn"/>
+                <constraint firstItem="b4h-JL-aSA" firstAttribute="top" secondItem="7BF-I6-WJZ" secondAttribute="bottom" constant="12" id="Vp6-kL-tc0"/>
+                <constraint firstItem="75D-qT-WoG" firstAttribute="leading" secondItem="uNF-lD-b4b" secondAttribute="trailing" constant="8" symbolic="YES" id="Xav-Kp-MvP"/>
+                <constraint firstAttribute="centerY" secondItem="Mt2-rF-QKC" secondAttribute="centerY" id="f30-RA-f1H"/>
+                <constraint firstItem="Mt2-rF-QKC" firstAttribute="leading" secondItem="7BF-I6-WJZ" secondAttribute="trailing" constant="8" symbolic="YES" id="fng-PW-CDB"/>
+                <constraint firstItem="OO3-h9-3hR" firstAttribute="top" secondItem="pno-9H-141" secondAttribute="top" constant="20" id="fnj-Ib-nv0"/>
+                <constraint firstAttribute="trailing" secondItem="OO3-h9-3hR" secondAttribute="trailing" constant="20" id="kRA-ee-g7r"/>
+                <constraint firstItem="7BF-I6-WJZ" firstAttribute="leading" secondItem="b4h-JL-aSA" secondAttribute="leading" id="naX-VN-R5x"/>
+                <constraint firstItem="7BF-I6-WJZ" firstAttribute="leading" secondItem="uNF-lD-b4b" secondAttribute="trailing" constant="8" symbolic="YES" id="oZq-0S-o7v"/>
+                <constraint firstItem="OO3-h9-3hR" firstAttribute="leading" secondItem="pno-9H-141" secondAttribute="leading" constant="20" id="obJ-Ma-03e"/>
+                <constraint firstItem="7BF-I6-WJZ" firstAttribute="top" secondItem="75D-qT-WoG" secondAttribute="bottom" constant="8" id="wgf-f2-I6H"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="adn" width="200" height="200"/>
+        <image name="proelia-icon" width="200" height="200"/>
+    </resources>
+</document>

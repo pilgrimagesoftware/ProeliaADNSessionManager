@@ -1,0 +1,13 @@
+//
+//  Base.xcconfig
+//  ADNSessionManager
+//
+//  Created by Paul Schifferer on 1/11/14.
+//  Copyright (c) 2014 Pilgrimage Software. All rights reserved.
+//
+
+OTHER_CFLAGS = $(inherited) -DADN_CLIENT_ID="@\"${ADN_CLIENT_ID}\"" -DADN_GRANT_SECRET="@\"${ADN_GRANT_SECRET}\""
+
+OTHER_LDFLAGS = $(inherited) -ObjC -all_load
+
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(HOME)/Projects/sdk/XPCKit" "$(HOME)/Projects/sdk/Pilgrimage/1.0.6"

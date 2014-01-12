@@ -1,0 +1,6 @@
+[submodule "Libraries/Snapper"]
+	path = Libraries/Snapper
+	url = https://github.com/pilgrimagesoftware/Snapper.git
+[submodule "Libraries/sskeychain"]
+	path = Libraries/sskeychain
+	url = https://github.com/soffes/sskeychain.git

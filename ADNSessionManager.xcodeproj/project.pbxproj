@@ -7,16 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2AB8891881EE8B006FE0F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2AB8881881EE8B006FE0F8 /* Foundation.framework */; };
+		5B2AB89E1881EEE2006FE0F8 /* Pilgrimage.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5B832B6118810CD0004EE45A /* Pilgrimage.framework */; };
+		5B2AB89F1881EEED006FE0F8 /* Pilgrimage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B832B6118810CD0004EE45A /* Pilgrimage.framework */; };
+		5B2AB8CA1881F165006FE0F8 /* Plugin-Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8B71881F165006FE0F8 /* Plugin-Base.xcconfig */; };
+		5B2AB8CB1881F165006FE0F8 /* Plugin-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8B81881F165006FE0F8 /* Plugin-Debug.xcconfig */; };
+		5B2AB8CC1881F165006FE0F8 /* Plugin-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8B91881F165006FE0F8 /* Plugin-Release.xcconfig */; };
+		5B2AB8CD1881F165006FE0F8 /* adn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8BB1881F165006FE0F8 /* adn.png */; };
+		5B2AB8CE1881F165006FE0F8 /* adn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8BC1881F165006FE0F8 /* adn@2x.png */; };
+		5B2AB8CF1881F165006FE0F8 /* ADNSessionManagerPlugin-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8BD1881F165006FE0F8 /* ADNSessionManagerPlugin-Info.plist */; };
+		5B2AB8D01881F165006FE0F8 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8BE1881F165006FE0F8 /* background.png */; };
+		5B2AB8D11881F165006FE0F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8BF1881F165006FE0F8 /* InfoPlist.strings */; };
+		5B2AB8D31881F165006FE0F8 /* proelia-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8C21881F165006FE0F8 /* proelia-icon.png */; };
+		5B2AB8D41881F165006FE0F8 /* proelia-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8C31881F165006FE0F8 /* proelia-icon@2x.png */; };
+		5B2AB8D51881F165006FE0F8 /* ETPSADNSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2AB8C61881F165006FE0F8 /* ETPSADNSessionManager.m */; };
+		5B2AB8D61881F165006FE0F8 /* ETPSALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2AB8C81881F165006FE0F8 /* ETPSALoginViewController.m */; };
+		5B2AB8D71881F165006FE0F8 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8C91881F165006FE0F8 /* LoginView.xib */; };
+		5B2AB8DF1881F170006FE0F8 /* ADNSessionManagerTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8DA1881F170006FE0F8 /* ADNSessionManagerTests-Info.plist */; };
+		5B2AB8E01881F170006FE0F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8DB1881F170006FE0F8 /* InfoPlist.strings */; };
+		5B2AB8E11881F170006FE0F8 /* ADNSessionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2AB8DE1881F170006FE0F8 /* ADNSessionManagerTests.m */; };
+		5B2AB8ED1881F179006FE0F8 /* XPC-Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8E41881F179006FE0F8 /* XPC-Base.xcconfig */; };
+		5B2AB8EE1881F179006FE0F8 /* XPC-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8E51881F179006FE0F8 /* XPC-Debug.xcconfig */; };
+		5B2AB8EF1881F179006FE0F8 /* XPC-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8E61881F179006FE0F8 /* XPC-Release.xcconfig */; };
+		5B2AB8F01881F179006FE0F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8E81881F179006FE0F8 /* InfoPlist.strings */; };
+		5B2AB8F11881F179006FE0F8 /* ADNSessionManagerXPCService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8EA1881F179006FE0F8 /* ADNSessionManagerXPCService-Info.plist */; };
+		5B2AB8F21881F179006FE0F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2AB8EC1881F179006FE0F8 /* main.m */; };
+		5B2AB8F41881F2CB006FE0F8 /* ADNSessionManager.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 5B2AB8F31881F2CB006FE0F8 /* ADNSessionManager.entitlements */; };
+		5B2AB9021881FA92006FE0F8 /* ETPSAAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2AB9011881FA92006FE0F8 /* ETPSAAuthorizer.m */; };
+		5B832B6218810CD0004EE45A /* Pilgrimage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B832B6118810CD0004EE45A /* Pilgrimage.framework */; };
+		5B832CCA188127AB004EE45A /* libSnapper-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B832CC71881279E004EE45A /* libSnapper-static.a */; };
 		5BB63F34187CFFEA00461CCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */; };
 		5BB63F45187D002700461CCE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB63F44187D002700461CCE /* XCTest.framework */; };
-		5BB63F4B187D002700461CCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB63F49187D002700461CCE /* InfoPlist.strings */; };
-		5BB63F4D187D002700461CCE /* ADNSessionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB63F4C187D002700461CCE /* ADNSessionManagerTests.m */; };
-		5BB63F5C187D005300461CCE /* ADNSessionManager-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BB63F56187D005300461CCE /* ADNSessionManager-Info.plist */; };
-		5BB63F5D187D005300461CCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB63F57187D005300461CCE /* InfoPlist.strings */; };
-		5BB63F5E187D005300461CCE /* ETPSADNSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB63F5B187D005300461CCE /* ETPSADNSessionManager.m */; };
+		5BE8E1661882F41F00E0AD41 /* ETPSAListenerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1651882F41F00E0AD41 /* ETPSAListenerDelegate.m */; };
+		5BE8E1711883054000E0AD41 /* ETPSACredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1701883054000E0AD41 /* ETPSACredentials.m */; };
+		5BE8E1721883054000E0AD41 /* ETPSACredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1701883054000E0AD41 /* ETPSACredentials.m */; };
+		5BE8E1761883080100E0AD41 /* ETPSASessionManagerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1741883080100E0AD41 /* ETPSASessionManagerService.m */; };
+		5BE8E17718830EE600E0AD41 /* libSnapper-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B832CC71881279E004EE45A /* libSnapper-static.a */; };
+		5BE8E19A1883191E00E0AD41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE8E1991883191D00E0AD41 /* CoreGraphics.framework */; };
+		5BE8E19B1883192800E0AD41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */; };
+		5BE8E1A318831C2200E0AD41 /* SSKeychain.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8E19D18831C2200E0AD41 /* SSKeychain.strings */; };
+		5BE8E1A418831C2200E0AD41 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1A018831C2200E0AD41 /* SSKeychain.m */; };
+		5BE8E1A518831C2200E0AD41 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1A218831C2200E0AD41 /* SSKeychainQuery.m */; };
+		5BE8E1A91883298A00E0AD41 /* ETPSAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1A81883298A00E0AD41 /* ETPSAConstants.m */; };
+		5BE8E1AA1883298A00E0AD41 /* ETPSAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1A81883298A00E0AD41 /* ETPSAConstants.m */; };
+		5BE8E1AC18832A1100E0AD41 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE8E1AB18832A1100E0AD41 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5B832B2E1880FC4B004EE45A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B832B241880FC4B004EE45A /* Snapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C6B5EAD1680E9B0006C63C1;
+			remoteInfo = "Snapper-iOS";
+		};
+		5B832B301880FC4B004EE45A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B832B241880FC4B004EE45A /* Snapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C6B5EBE1680E9B0006C63C1;
+			remoteInfo = "Snapper-iOSTests";
+		};
+		5B832B321880FC4B004EE45A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B832B241880FC4B004EE45A /* Snapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C6B5F031680EE8A006C63C1;
+			remoteInfo = Snapper;
+		};
+		5B832B341880FC4B004EE45A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B832B241880FC4B004EE45A /* Snapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C6B5F191680EE8B006C63C1;
+			remoteInfo = "Snapper-OSXTests";
+		};
+		5B832CC61881279E004EE45A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B832B241880FC4B004EE45A /* Snapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5B832B671881245A004EE45A;
+			remoteInfo = "Snapper-static";
+		};
+		5B832CC8188127A2004EE45A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B832B241880FC4B004EE45A /* Snapper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B832B661881245A004EE45A;
+			remoteInfo = "Snapper-static";
+		};
 		5BB63F4F187D002700461CCE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5BDD3797169BEA04009B0CC6 /* Project object */;
@@ -24,32 +103,118 @@
 			remoteGlobalIDString = 5BB63F32187CFFEA00461CCE;
 			remoteInfo = ADNSessionManager;
 		};
+		5BE8E17818830EF200E0AD41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B832B241880FC4B004EE45A /* Snapper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B832B661881245A004EE45A;
+			remoteInfo = "Snapper-static";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5B2AB89C1881EEC1006FE0F8 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5B2AB89E1881EEE2006FE0F8 /* Pilgrimage.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B832B391880FC73004EE45A /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5B2AB8871881EE8B006FE0F8 /* com.pilgrimagesoftware.proelia.xpc.ADNSessionManager.xpc */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = com.pilgrimagesoftware.proelia.xpc.ADNSessionManager.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B2AB8881881EE8B006FE0F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5B2AB89A1881EEAA006FE0F8 /* XPCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XPCKit.framework; path = ../../../../../../../../../sdk/XPCKit/XPCKit.framework; sourceTree = "<group>"; };
+		5B2AB8B71881F165006FE0F8 /* Plugin-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Plugin-Base.xcconfig"; sourceTree = "<group>"; };
+		5B2AB8B81881F165006FE0F8 /* Plugin-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Plugin-Debug.xcconfig"; sourceTree = "<group>"; };
+		5B2AB8B91881F165006FE0F8 /* Plugin-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Plugin-Release.xcconfig"; sourceTree = "<group>"; };
+		5B2AB8BB1881F165006FE0F8 /* adn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adn.png; sourceTree = "<group>"; };
+		5B2AB8BC1881F165006FE0F8 /* adn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adn@2x.png"; sourceTree = "<group>"; };
+		5B2AB8BD1881F165006FE0F8 /* ADNSessionManagerPlugin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ADNSessionManagerPlugin-Info.plist"; sourceTree = "<group>"; };
+		5B2AB8BE1881F165006FE0F8 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		5B2AB8C01881F165006FE0F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B2AB8C21881F165006FE0F8 /* proelia-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proelia-icon.png"; sourceTree = "<group>"; };
+		5B2AB8C31881F165006FE0F8 /* proelia-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proelia-icon@2x.png"; sourceTree = "<group>"; };
+		5B2AB8C51881F165006FE0F8 /* ETPSADNSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSADNSessionManager.h; sourceTree = "<group>"; };
+		5B2AB8C61881F165006FE0F8 /* ETPSADNSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSADNSessionManager.m; sourceTree = "<group>"; };
+		5B2AB8C71881F165006FE0F8 /* ETPSALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSALoginViewController.h; sourceTree = "<group>"; };
+		5B2AB8C81881F165006FE0F8 /* ETPSALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSALoginViewController.m; sourceTree = "<group>"; };
+		5B2AB8C91881F165006FE0F8 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		5B2AB8DA1881F170006FE0F8 /* ADNSessionManagerTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ADNSessionManagerTests-Info.plist"; sourceTree = "<group>"; };
+		5B2AB8DC1881F170006FE0F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B2AB8DE1881F170006FE0F8 /* ADNSessionManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADNSessionManagerTests.m; sourceTree = "<group>"; };
+		5B2AB8E41881F179006FE0F8 /* XPC-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "XPC-Base.xcconfig"; sourceTree = "<group>"; };
+		5B2AB8E51881F179006FE0F8 /* XPC-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "XPC-Debug.xcconfig"; sourceTree = "<group>"; };
+		5B2AB8E61881F179006FE0F8 /* XPC-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "XPC-Release.xcconfig"; sourceTree = "<group>"; };
+		5B2AB8E91881F179006FE0F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B2AB8EA1881F179006FE0F8 /* ADNSessionManagerXPCService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ADNSessionManagerXPCService-Info.plist"; sourceTree = "<group>"; };
+		5B2AB8EC1881F179006FE0F8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B2AB8F31881F2CB006FE0F8 /* ADNSessionManager.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ADNSessionManager.entitlements; sourceTree = "<group>"; };
+		5B2AB9001881FA92006FE0F8 /* ETPSAAuthorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSAAuthorizer.h; sourceTree = "<group>"; };
+		5B2AB9011881FA92006FE0F8 /* ETPSAAuthorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSAAuthorizer.m; sourceTree = "<group>"; };
+		5B832B241880FC4B004EE45A /* Snapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Snapper.xcodeproj; path = Libraries/Snapper/Snapper.xcodeproj; sourceTree = "<group>"; };
+		5B832B6118810CD0004EE45A /* Pilgrimage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pilgrimage.framework; path = ../../../../../../../../../sdk/Pilgrimage/1.0.6/Pilgrimage.framework; sourceTree = "<group>"; };
 		5BB63F33187CFFEA00461CCE /* ADNSessionManager.proeliaplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNSessionManager.proeliaplugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BB63F43187D002700461CCE /* ADNSessionManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNSessionManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB63F43187D002700461CCE /* ADNSessionManagerPluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNSessionManagerPluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB63F44187D002700461CCE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5BB63F48187D002700461CCE /* ADNSessionManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADNSessionManagerTests-Info.plist"; sourceTree = "<group>"; };
-		5BB63F4A187D002700461CCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5BB63F4C187D002700461CCE /* ADNSessionManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADNSessionManagerTests.m; sourceTree = "<group>"; };
-		5BB63F4E187D002700461CCE /* ADNSessionManagerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ADNSessionManagerTests-Prefix.pch"; sourceTree = "<group>"; };
-		5BB63F56187D005300461CCE /* ADNSessionManager-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ADNSessionManager-Info.plist"; sourceTree = "<group>"; };
-		5BB63F58187D005300461CCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5BB63F5A187D005300461CCE /* ETPSADNSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSADNSessionManager.h; sourceTree = "<group>"; };
-		5BB63F5B187D005300461CCE /* ETPSADNSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSADNSessionManager.m; sourceTree = "<group>"; };
 		5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5BDD37A6169BEA04009B0CC6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5BDD37A7169BEA04009B0CC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5BDD37A8169BEA04009B0CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BDD37B9169BEA04009B0CC6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5BE8E1641882F41F00E0AD41 /* ETPSAListenerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSAListenerDelegate.h; sourceTree = "<group>"; };
+		5BE8E1651882F41F00E0AD41 /* ETPSAListenerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSAListenerDelegate.m; sourceTree = "<group>"; };
+		5BE8E16E1883050D00E0AD41 /* ETPSASessionManagerServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSASessionManagerServiceProtocol.h; sourceTree = "<group>"; };
+		5BE8E16F1883054000E0AD41 /* ETPSACredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSACredentials.h; sourceTree = "<group>"; };
+		5BE8E1701883054000E0AD41 /* ETPSACredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSACredentials.m; sourceTree = "<group>"; };
+		5BE8E1731883080100E0AD41 /* ETPSASessionManagerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSASessionManagerService.h; sourceTree = "<group>"; };
+		5BE8E1741883080100E0AD41 /* ETPSASessionManagerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSASessionManagerService.m; sourceTree = "<group>"; };
+		5BE8E1991883191D00E0AD41 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5BE8E19E18831C2200E0AD41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SSKeychain.strings; sourceTree = "<group>"; };
+		5BE8E19F18831C2200E0AD41 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		5BE8E1A018831C2200E0AD41 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		5BE8E1A118831C2200E0AD41 /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
+		5BE8E1A218831C2200E0AD41 /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
+		5BE8E1A71883298A00E0AD41 /* ETPSAConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSAConstants.h; sourceTree = "<group>"; };
+		5BE8E1A81883298A00E0AD41 /* ETPSAConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSAConstants.m; sourceTree = "<group>"; };
+		5BE8E1AB18832A1100E0AD41 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5B2AB8841881EE8B006FE0F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE8E19B1883192800E0AD41 /* Cocoa.framework in Frameworks */,
+				5BE8E19A1883191E00E0AD41 /* CoreGraphics.framework in Frameworks */,
+				5BE8E17718830EE600E0AD41 /* libSnapper-static.a in Frameworks */,
+				5B2AB8891881EE8B006FE0F8 /* Foundation.framework in Frameworks */,
+				5B2AB89F1881EEED006FE0F8 /* Pilgrimage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BB63F30187CFFEA00461CCE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE8E1AC18832A1100E0AD41 /* Security.framework in Frameworks */,
+				5B832CCA188127AB004EE45A /* libSnapper-static.a in Frameworks */,
+				5B832B6218810CD0004EE45A /* Pilgrimage.framework in Frameworks */,
 				5BB63F34187CFFEA00461CCE /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,57 +230,151 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5BB63F46187D002700461CCE /* ADNSessionManagerTests */ = {
+		5B2AB8B51881F165006FE0F8 /* ADNSessionManagerPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				5BB63F4C187D002700461CCE /* ADNSessionManagerTests.m */,
-				5BB63F47187D002700461CCE /* Supporting Files */,
+				5B2AB8B61881F165006FE0F8 /* Configuration */,
+				5B2AB8BA1881F165006FE0F8 /* Resources */,
+				5B2AB8C41881F165006FE0F8 /* Source */,
 			);
-			path = ADNSessionManagerTests;
+			path = ADNSessionManagerPlugin;
 			sourceTree = "<group>";
 		};
-		5BB63F47187D002700461CCE /* Supporting Files */ = {
+		5B2AB8B61881F165006FE0F8 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				5BB63F48187D002700461CCE /* ADNSessionManagerTests-Info.plist */,
-				5BB63F49187D002700461CCE /* InfoPlist.strings */,
-				5BB63F4E187D002700461CCE /* ADNSessionManagerTests-Prefix.pch */,
+				5B2AB8B71881F165006FE0F8 /* Plugin-Base.xcconfig */,
+				5B2AB8B81881F165006FE0F8 /* Plugin-Debug.xcconfig */,
+				5B2AB8B91881F165006FE0F8 /* Plugin-Release.xcconfig */,
 			);
-			name = "Supporting Files";
+			path = Configuration;
 			sourceTree = "<group>";
 		};
-		5BB63F54187D005300461CCE /* ADNSessionManager */ = {
+		5B2AB8BA1881F165006FE0F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5BB63F55187D005300461CCE /* Resources */,
-				5BB63F59187D005300461CCE /* Source */,
-			);
-			path = ADNSessionManager;
-			sourceTree = "<group>";
-		};
-		5BB63F55187D005300461CCE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5BB63F56187D005300461CCE /* ADNSessionManager-Info.plist */,
-				5BB63F57187D005300461CCE /* InfoPlist.strings */,
+				5B2AB8BB1881F165006FE0F8 /* adn.png */,
+				5B2AB8BC1881F165006FE0F8 /* adn@2x.png */,
+				5B2AB8BD1881F165006FE0F8 /* ADNSessionManagerPlugin-Info.plist */,
+				5B2AB8BE1881F165006FE0F8 /* background.png */,
+				5B2AB8BF1881F165006FE0F8 /* InfoPlist.strings */,
+				5B2AB8C21881F165006FE0F8 /* proelia-icon.png */,
+				5B2AB8C31881F165006FE0F8 /* proelia-icon@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		5BB63F59187D005300461CCE /* Source */ = {
+		5B2AB8C41881F165006FE0F8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				5BB63F5A187D005300461CCE /* ETPSADNSessionManager.h */,
-				5BB63F5B187D005300461CCE /* ETPSADNSessionManager.m */,
+				5B2AB8C51881F165006FE0F8 /* ETPSADNSessionManager.h */,
+				5B2AB8C61881F165006FE0F8 /* ETPSADNSessionManager.m */,
+				5B2AB8C71881F165006FE0F8 /* ETPSALoginViewController.h */,
+				5B2AB8C81881F165006FE0F8 /* ETPSALoginViewController.m */,
+				5B2AB8C91881F165006FE0F8 /* LoginView.xib */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		5B2AB8D81881F170006FE0F8 /* ADNSessionManagerPluginTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B2AB8D91881F170006FE0F8 /* Resources */,
+				5B2AB8DD1881F170006FE0F8 /* Source */,
+			);
+			path = ADNSessionManagerPluginTests;
+			sourceTree = "<group>";
+		};
+		5B2AB8D91881F170006FE0F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B2AB8DA1881F170006FE0F8 /* ADNSessionManagerTests-Info.plist */,
+				5B2AB8DB1881F170006FE0F8 /* InfoPlist.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B2AB8DD1881F170006FE0F8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5B2AB8DE1881F170006FE0F8 /* ADNSessionManagerTests.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		5B2AB8E21881F179006FE0F8 /* ADNSessionManagerXPCService */ = {
+			isa = PBXGroup;
+			children = (
+				5B2AB8E31881F179006FE0F8 /* Configuration */,
+				5B2AB8E71881F179006FE0F8 /* Resources */,
+				5B2AB8EB1881F179006FE0F8 /* Source */,
+			);
+			path = ADNSessionManagerXPCService;
+			sourceTree = "<group>";
+		};
+		5B2AB8E31881F179006FE0F8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				5B2AB8E41881F179006FE0F8 /* XPC-Base.xcconfig */,
+				5B2AB8E51881F179006FE0F8 /* XPC-Debug.xcconfig */,
+				5B2AB8E61881F179006FE0F8 /* XPC-Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		5B2AB8E71881F179006FE0F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B2AB8E81881F179006FE0F8 /* InfoPlist.strings */,
+				5B2AB8EA1881F179006FE0F8 /* ADNSessionManagerXPCService-Info.plist */,
+				5B2AB8F31881F2CB006FE0F8 /* ADNSessionManager.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B2AB8EB1881F179006FE0F8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5B2AB8EC1881F179006FE0F8 /* main.m */,
+				5B2AB9001881FA92006FE0F8 /* ETPSAAuthorizer.h */,
+				5B2AB9011881FA92006FE0F8 /* ETPSAAuthorizer.m */,
+				5BE8E1641882F41F00E0AD41 /* ETPSAListenerDelegate.h */,
+				5BE8E1651882F41F00E0AD41 /* ETPSAListenerDelegate.m */,
+				5BE8E1731883080100E0AD41 /* ETPSASessionManagerService.h */,
+				5BE8E1741883080100E0AD41 /* ETPSASessionManagerService.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		5B832B231880FC39004EE45A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5BE8E19C18831C2100E0AD41 /* SSKeychain */,
+				5B832B241880FC4B004EE45A /* Snapper.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		5B832B251880FC4B004EE45A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B832B2F1880FC4B004EE45A /* libSnapper-iOS.a */,
+				5B832B311880FC4B004EE45A /* Snapper-iOSTests.octest */,
+				5B832B331880FC4B004EE45A /* Snapper.framework */,
+				5B832B351880FC4B004EE45A /* Snapper-OSXTests.octest */,
+				5B832CC71881279E004EE45A /* libSnapper-static.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5BDD3796169BEA04009B0CC6 = {
 			isa = PBXGroup;
 			children = (
-				5BB63F54187D005300461CCE /* ADNSessionManager */,
-				5BB63F46187D002700461CCE /* ADNSessionManagerTests */,
+				5BE8E16B188304ED00E0AD41 /* Shared */,
+				5B2AB8B51881F165006FE0F8 /* ADNSessionManagerPlugin */,
+				5B2AB8D81881F170006FE0F8 /* ADNSessionManagerPluginTests */,
+				5B2AB8E21881F179006FE0F8 /* ADNSessionManagerXPCService */,
+				5B832B231880FC39004EE45A /* Libraries */,
 				5BDD37A2169BEA04009B0CC6 /* Frameworks */,
 				5BDD37A1169BEA04009B0CC6 /* Products */,
 			);
@@ -125,7 +384,8 @@
 			isa = PBXGroup;
 			children = (
 				5BB63F33187CFFEA00461CCE /* ADNSessionManager.proeliaplugin */,
-				5BB63F43187D002700461CCE /* ADNSessionManagerTests.xctest */,
+				5BB63F43187D002700461CCE /* ADNSessionManagerPluginTests.xctest */,
+				5B2AB8871881EE8B006FE0F8 /* com.pilgrimagesoftware.proelia.xpc.ADNSessionManager.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,9 +393,14 @@
 		5BDD37A2169BEA04009B0CC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BE8E1AB18832A1100E0AD41 /* Security.framework */,
+				5BE8E1991883191D00E0AD41 /* CoreGraphics.framework */,
+				5B2AB89A1881EEAA006FE0F8 /* XPCKit.framework */,
+				5B832B6118810CD0004EE45A /* Pilgrimage.framework */,
 				5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */,
 				5BDD37B9169BEA04009B0CC6 /* SenTestingKit.framework */,
 				5BB63F44187D002700461CCE /* XCTest.framework */,
+				5B2AB8881881EE8B006FE0F8 /* Foundation.framework */,
 				5BDD37A5169BEA04009B0CC6 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -151,29 +416,93 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
+		5BE8E16B188304ED00E0AD41 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5BE8E16C188304ED00E0AD41 /* Resources */,
+				5BE8E16D188304ED00E0AD41 /* Source */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5BE8E16C188304ED00E0AD41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5BE8E16D188304ED00E0AD41 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5BE8E16E1883050D00E0AD41 /* ETPSASessionManagerServiceProtocol.h */,
+				5BE8E16F1883054000E0AD41 /* ETPSACredentials.h */,
+				5BE8E1701883054000E0AD41 /* ETPSACredentials.m */,
+				5BE8E1A71883298A00E0AD41 /* ETPSAConstants.h */,
+				5BE8E1A81883298A00E0AD41 /* ETPSAConstants.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		5BE8E19C18831C2100E0AD41 /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				5BE8E19D18831C2200E0AD41 /* SSKeychain.strings */,
+				5BE8E19F18831C2200E0AD41 /* SSKeychain.h */,
+				5BE8E1A018831C2200E0AD41 /* SSKeychain.m */,
+				5BE8E1A118831C2200E0AD41 /* SSKeychainQuery.h */,
+				5BE8E1A218831C2200E0AD41 /* SSKeychainQuery.m */,
+			);
+			name = SSKeychain;
+			path = Libraries/sskeychain/SSKeychain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5BB63F32187CFFEA00461CCE /* ADNSessionManager */ = {
+		5B2AB8861881EE8B006FE0F8 /* ADNSessionManagerXPCService */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BB63F3E187CFFEA00461CCE /* Build configuration list for PBXNativeTarget "ADNSessionManager" */;
+			buildConfigurationList = 5B2AB8991881EE8C006FE0F8 /* Build configuration list for PBXNativeTarget "ADNSessionManagerXPCService" */;
 			buildPhases = (
-				5BB63F2F187CFFEA00461CCE /* Sources */,
-				5BB63F30187CFFEA00461CCE /* Frameworks */,
-				5BB63F31187CFFEA00461CCE /* Resources */,
+				5B2AB8831881EE8B006FE0F8 /* Sources */,
+				5B2AB8841881EE8B006FE0F8 /* Frameworks */,
+				5B2AB8851881EE8B006FE0F8 /* Resources */,
+				5B2AB89C1881EEC1006FE0F8 /* Copy Frameworks */,
+				5BE8E17A18830F1400E0AD41 /* Sign Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5BE8E17918830EF200E0AD41 /* PBXTargetDependency */,
 			);
-			name = ADNSessionManager;
+			name = ADNSessionManagerXPCService;
+			productName = SessionManagerService;
+			productReference = 5B2AB8871881EE8B006FE0F8 /* com.pilgrimagesoftware.proelia.xpc.ADNSessionManager.xpc */;
+			productType = "com.apple.product-type.bundle";
+		};
+		5BB63F32187CFFEA00461CCE /* ADNSessionManagerPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BB63F3E187CFFEA00461CCE /* Build configuration list for PBXNativeTarget "ADNSessionManagerPlugin" */;
+			buildPhases = (
+				5BB63F2F187CFFEA00461CCE /* Sources */,
+				5BB63F30187CFFEA00461CCE /* Frameworks */,
+				5BB63F31187CFFEA00461CCE /* Resources */,
+				5B832B391880FC73004EE45A /* Copy Frameworks */,
+				5B832B4B1880FF0D004EE45A /* Sign Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B832CC9188127A2004EE45A /* PBXTargetDependency */,
+			);
+			name = ADNSessionManagerPlugin;
 			productName = ADNSessionManager;
 			productReference = 5BB63F33187CFFEA00461CCE /* ADNSessionManager.proeliaplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
-		5BB63F42187D002700461CCE /* ADNSessionManagerTests */ = {
+		5BB63F42187D002700461CCE /* ADNSessionManagerPluginTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BB63F51187D002700461CCE /* Build configuration list for PBXNativeTarget "ADNSessionManagerTests" */;
+			buildConfigurationList = 5BB63F51187D002700461CCE /* Build configuration list for PBXNativeTarget "ADNSessionManagerPluginTests" */;
 			buildPhases = (
 				5BB63F3F187D002700461CCE /* Sources */,
 				5BB63F40187D002700461CCE /* Frameworks */,
@@ -184,9 +513,9 @@
 			dependencies = (
 				5BB63F50187D002700461CCE /* PBXTargetDependency */,
 			);
-			name = ADNSessionManagerTests;
+			name = ADNSessionManagerPluginTests;
 			productName = ADNSessionManagerTests;
-			productReference = 5BB63F43187D002700461CCE /* ADNSessionManagerTests.xctest */;
+			productReference = 5BB63F43187D002700461CCE /* ADNSessionManagerPluginTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -214,21 +543,89 @@
 			mainGroup = 5BDD3796169BEA04009B0CC6;
 			productRefGroup = 5BDD37A1169BEA04009B0CC6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5B832B251880FC4B004EE45A /* Products */;
+					ProjectRef = 5B832B241880FC4B004EE45A /* Snapper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				5BB63F32187CFFEA00461CCE /* ADNSessionManager */,
-				5BB63F42187D002700461CCE /* ADNSessionManagerTests */,
+				5BB63F32187CFFEA00461CCE /* ADNSessionManagerPlugin */,
+				5BB63F42187D002700461CCE /* ADNSessionManagerPluginTests */,
+				5B2AB8861881EE8B006FE0F8 /* ADNSessionManagerXPCService */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		5B832B2F1880FC4B004EE45A /* libSnapper-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSnapper-iOS.a";
+			remoteRef = 5B832B2E1880FC4B004EE45A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5B832B311880FC4B004EE45A /* Snapper-iOSTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Snapper-iOSTests.octest";
+			remoteRef = 5B832B301880FC4B004EE45A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5B832B331880FC4B004EE45A /* Snapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Snapper.framework;
+			remoteRef = 5B832B321880FC4B004EE45A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5B832B351880FC4B004EE45A /* Snapper-OSXTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Snapper-OSXTests.octest";
+			remoteRef = 5B832B341880FC4B004EE45A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5B832CC71881279E004EE45A /* libSnapper-static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSnapper-static.a";
+			remoteRef = 5B832CC61881279E004EE45A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
+		5B2AB8851881EE8B006FE0F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B2AB8EE1881F179006FE0F8 /* XPC-Debug.xcconfig in Resources */,
+				5B2AB8F01881F179006FE0F8 /* InfoPlist.strings in Resources */,
+				5B2AB8F41881F2CB006FE0F8 /* ADNSessionManager.entitlements in Resources */,
+				5B2AB8ED1881F179006FE0F8 /* XPC-Base.xcconfig in Resources */,
+				5B2AB8F11881F179006FE0F8 /* ADNSessionManagerXPCService-Info.plist in Resources */,
+				5B2AB8EF1881F179006FE0F8 /* XPC-Release.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BB63F31187CFFEA00461CCE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB63F5C187D005300461CCE /* ADNSessionManager-Info.plist in Resources */,
-				5BB63F5D187D005300461CCE /* InfoPlist.strings in Resources */,
+				5B2AB8CE1881F165006FE0F8 /* adn@2x.png in Resources */,
+				5B2AB8D11881F165006FE0F8 /* InfoPlist.strings in Resources */,
+				5B2AB8D71881F165006FE0F8 /* LoginView.xib in Resources */,
+				5B2AB8CF1881F165006FE0F8 /* ADNSessionManagerPlugin-Info.plist in Resources */,
+				5B2AB8D31881F165006FE0F8 /* proelia-icon.png in Resources */,
+				5B2AB8D01881F165006FE0F8 /* background.png in Resources */,
+				5B2AB8CB1881F165006FE0F8 /* Plugin-Debug.xcconfig in Resources */,
+				5B2AB8CD1881F165006FE0F8 /* adn.png in Resources */,
+				5BE8E1A318831C2200E0AD41 /* SSKeychain.strings in Resources */,
+				5B2AB8CA1881F165006FE0F8 /* Plugin-Base.xcconfig in Resources */,
+				5B2AB8D41881F165006FE0F8 /* proelia-icon@2x.png in Resources */,
+				5B2AB8CC1881F165006FE0F8 /* Plugin-Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,18 +633,68 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB63F4B187D002700461CCE /* InfoPlist.strings in Resources */,
+				5B2AB8DF1881F170006FE0F8 /* ADNSessionManagerTests-Info.plist in Resources */,
+				5B2AB8E01881F170006FE0F8 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B832B4B1880FF0D004EE45A /* Sign Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Sign Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LOCATION=\"${BUILT_PRODUCTS_DIR}\"/\"${FRAMEWORKS_FOLDER_PATH}\"\nIDENTITY=\"3rd Party Mac Developer Application: Paul Schifferer\"\n#codesign --verbose --force --sign \"${IDENTITY}\" \"${LOCATION}/Snapper.framework/Versions/A\"\n";
+		};
+		5BE8E17A18830F1400E0AD41 /* Sign Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Sign Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LOCATION=\"${BUILT_PRODUCTS_DIR}\"/\"${FRAMEWORKS_FOLDER_PATH}\"\nIDENTITY=\"3rd Party Mac Developer Application: Paul Schifferer\"\ncodesign --verbose --force --sign \"${IDENTITY}\" \"${LOCATION}/Pilgrimage.framework/Versions/A\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		5B2AB8831881EE8B006FE0F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE8E1761883080100E0AD41 /* ETPSASessionManagerService.m in Sources */,
+				5BE8E1721883054000E0AD41 /* ETPSACredentials.m in Sources */,
+				5B2AB9021881FA92006FE0F8 /* ETPSAAuthorizer.m in Sources */,
+				5BE8E1AA1883298A00E0AD41 /* ETPSAConstants.m in Sources */,
+				5BE8E1661882F41F00E0AD41 /* ETPSAListenerDelegate.m in Sources */,
+				5B2AB8F21881F179006FE0F8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BB63F2F187CFFEA00461CCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB63F5E187D005300461CCE /* ETPSADNSessionManager.m in Sources */,
+				5B2AB8D61881F165006FE0F8 /* ETPSALoginViewController.m in Sources */,
+				5BE8E1A518831C2200E0AD41 /* SSKeychainQuery.m in Sources */,
+				5BE8E1A418831C2200E0AD41 /* SSKeychain.m in Sources */,
+				5BE8E1A91883298A00E0AD41 /* ETPSAConstants.m in Sources */,
+				5BE8E1711883054000E0AD41 /* ETPSACredentials.m in Sources */,
+				5B2AB8D51881F165006FE0F8 /* ETPSADNSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,48 +702,80 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB63F4D187D002700461CCE /* ADNSessionManagerTests.m in Sources */,
+				5B2AB8E11881F170006FE0F8 /* ADNSessionManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5B832CC9188127A2004EE45A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Snapper-static";
+			targetProxy = 5B832CC8188127A2004EE45A /* PBXContainerItemProxy */;
+		};
 		5BB63F50187D002700461CCE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5BB63F32187CFFEA00461CCE /* ADNSessionManager */;
+			target = 5BB63F32187CFFEA00461CCE /* ADNSessionManagerPlugin */;
 			targetProxy = 5BB63F4F187D002700461CCE /* PBXContainerItemProxy */;
+		};
+		5BE8E17918830EF200E0AD41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Snapper-static";
+			targetProxy = 5BE8E17818830EF200E0AD41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5BB63F49187D002700461CCE /* InfoPlist.strings */ = {
+		5B2AB8BF1881F165006FE0F8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5BB63F4A187D002700461CCE /* en */,
+				5B2AB8C01881F165006FE0F8 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		5BB63F57187D005300461CCE /* InfoPlist.strings */ = {
+		5B2AB8DB1881F170006FE0F8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5BB63F58187D005300461CCE /* en */,
+				5B2AB8DC1881F170006FE0F8 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5B2AB8E81881F179006FE0F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B2AB8E91881F179006FE0F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5BE8E19D18831C2200E0AD41 /* SSKeychain.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BE8E19E18831C2200E0AD41 /* en */,
+			);
+			name = SSKeychain.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5BB63F3C187CFFEA00461CCE /* Debug */ = {
+		5B2AB8931881EE8C006FE0F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2AB8E51881F179006FE0F8 /* XPC-Debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = ADNSessionManagerXPCService/Resources/ADNSessionManager.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pauly/Projects/sdk/XPCKit,
+					/Users/pauly/Projects/sdk/Pilgrimage/1.0.6,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -306,16 +785,76 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "ADNSessionManager/Resources/ADNSessionManager-Info.plist";
+				INFOPLIST_FILE = "ADNSessionManagerXPCService/Resources/ADNSessionManagerXPCService-Info.plist";
+				MACH_O_TYPE = mh_execute;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = com.pilgrimagesoftware.proelia.xpc.ADNSessionManager;
+				WRAPPER_EXTENSION = xpc;
+			};
+			name = Debug;
+		};
+		5B2AB8941881EE8C006FE0F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2AB8E61881F179006FE0F8 /* XPC-Release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_ENTITLEMENTS = ADNSessionManagerXPCService/Resources/ADNSessionManager.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pauly/Projects/sdk/XPCKit,
+					/Users/pauly/Projects/sdk/Pilgrimage/1.0.6,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "ADNSessionManagerXPCService/Resources/ADNSessionManagerXPCService-Info.plist";
+				MACH_O_TYPE = mh_execute;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = com.pilgrimagesoftware.proelia.xpc.ADNSessionManager;
+				WRAPPER_EXTENSION = xpc;
+			};
+			name = Release;
+		};
+		5BB63F3C187CFFEA00461CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2AB8B81881F165006FE0F8 /* Plugin-Debug.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pauly/Projects/sdk/Pilgrimage/1.0.6,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "ADNSessionManagerPlugin/Resources/ADNSessionManagerPlugin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ADNSessionManager;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = proeliaplugin;
 			};
 			name = Debug;
 		};
 		5BB63F3D187CFFEA00461CCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2AB8B91881F165006FE0F8 /* Plugin-Release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -323,21 +862,27 @@
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pauly/Projects/sdk/Pilgrimage/1.0.6,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "ADNSessionManager/Resources/ADNSessionManager-Info.plist";
+				INFOPLIST_FILE = "ADNSessionManagerPlugin/Resources/ADNSessionManagerPlugin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ADNSessionManager;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = proeliaplugin;
 			};
 			name = Release;
 		};
 		5BB63F52187D002700461CCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2AB8B81881F165006FE0F8 /* Plugin-Debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -364,6 +909,7 @@
 		};
 		5BB63F53187D002700461CCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2AB8B91881F165006FE0F8 /* Plugin-Release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -413,8 +959,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -441,7 +989,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -449,21 +999,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5BB63F3E187CFFEA00461CCE /* Build configuration list for PBXNativeTarget "ADNSessionManager" */ = {
+		5B2AB8991881EE8C006FE0F8 /* Build configuration list for PBXNativeTarget "ADNSessionManagerXPCService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B2AB8931881EE8C006FE0F8 /* Debug */,
+				5B2AB8941881EE8C006FE0F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BB63F3E187CFFEA00461CCE /* Build configuration list for PBXNativeTarget "ADNSessionManagerPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5BB63F3C187CFFEA00461CCE /* Debug */,
 				5BB63F3D187CFFEA00461CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		5BB63F51187D002700461CCE /* Build configuration list for PBXNativeTarget "ADNSessionManagerTests" */ = {
+		5BB63F51187D002700461CCE /* Build configuration list for PBXNativeTarget "ADNSessionManagerPluginTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5BB63F52187D002700461CCE /* Debug */,
 				5BB63F53187D002700461CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BDD379A169BEA04009B0CC6 /* Build configuration list for PBXProject "ADNSessionManager" */ = {
 			isa = XCConfigurationList;
