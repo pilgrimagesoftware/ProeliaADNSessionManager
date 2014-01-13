@@ -12,6 +12,8 @@
 
 #import "ETPSALoginViewController.h"
 
+#import <ProeliaCore/ETCVActiveEncounterService.h>
+
 #import "ETPSASessionManagerServiceProtocol.h"
 #import "ETPSAConstants.h"
 
@@ -56,25 +58,18 @@
 
 @synthesize encounter = _encounter;
 @synthesize account = _account;
+@synthesize delegate = _delegate;
 
-- (NSViewController*)authorizationViewController {
-
-    if(_loginView == nil) {
-        _loginView = [ETPSALoginViewController new];
-    }
-
-    return _loginView;
-}
-
-- (void)performAuthorization:(NSDictionary*)authInfo
-              withCompletion:(void (^)(NSString* account, NSError* error))completionBlock {
+- (void)performAuthorization:(NSDictionary*)authInfo {
 
     // lookup previous account information
     if(_account) {
         NSString* accessToken = [SSKeychain passwordForService:ProeliaKeychainServiceName
                                                        account:_account];
         if(accessToken) {
-            completionBlock(_account, nil);
+            [_delegate sessionManager:self
+               authorizationSucceeded:_account];
+            //            completionBlock(_account, nil);
             return;
         }
     }
@@ -83,10 +78,14 @@
     NSString* grantSecret = authInfo[@"grantSecret"];
     NSString* scopes = authInfo[@"scopes"];
 
-    if(_account) {
-    _loginView.usernameField.stringValue = _account;
+    if(_loginView == nil) {
+        _loginView = [ETPSALoginViewController new];
     }
-    
+
+    //    if(_account) {
+    //    _loginView.usernameField.stringValue = _account;
+    //    }
+
     _loginView.loginHandler = ^BOOL(NSString* username, NSString* password) {
 
         // XPC call
@@ -104,34 +103,70 @@
 
         id<ETPSASessionManagerService> sessionManager = (id<ETPSASessionManagerService>)connection.remoteObjectProxy;
         [sessionManager authorize:credentials
-                       completion:^(NSString *accessToken, NSString* username, NSError* error) {
+                       completion:^(NSString *accessToken, NSInteger userId, NSError* error) {
 
-                           if(accessToken && username) {
+                           if(accessToken && userId) {
                                // store in keychain
                                [SSKeychain setPassword:accessToken
                                             forService:ProeliaKeychainServiceName
                                                account:username];
 
-                               _account = username;
+                               _account = [@(userId) stringValue];
 
-                               // call block
-                               completionBlock(username, nil);
+                               // finish
+                               [_delegate sessionManager:self
+                                  dismissCredentialsView:_loginView.view];
+
+                               [_delegate sessionManager:self
+                                  authorizationSucceeded:_account];
                            }
                            else {
                                // TODO?
 
-                               completionBlock(nil, error);
+                               [_delegate sessionManager:self
+                                     authorizationFailed:error];
                                return;
                            }
                        }];
 
         return YES;
     };
+
+    [_delegate sessionManager:self
+       presentCredentialsView:_loginView.view];
 }
 
-- (void)startSession:(ETKMActiveEncounter*)encounter
-          completion:(void (^)())completionBlock {
+- (ETKMActiveEncounterSession*)createSession {
 
+    NSDictionary* controlInfoDict = (@{
+                                       ETPSAControlChannelId : @"",
+                                       ETPSAInputChannelId : @"",
+                                       ETPSAChatChannelId : @"",
+                                       });
+    NSError* error = nil;
+    NSData* controlInfoData = [NSJSONSerialization dataWithJSONObject:controlInfoDict
+                                                              options:0
+                                                                error:&error];
+    if(controlInfoData == nil) {
+        NSLog(@"Unable to serialize JSON data: %@", error);
+        return nil;
+    }
+    NSString* controlInfo = [[NSString alloc] initWithData:controlInfoData
+                                                  encoding:NSUTF8StringEncoding];
+    ETKMActiveEncounterSession* session = [[ETCVActiveEncounterService sharedActiveEncounterService] createSessionForAccount:_account
+                                                                                                                 controlInfo:controlInfo
+                                                                                                                 inEncounter:_encounter];
+
+    return session;
+}
+
+- (void)startSession:(void (^)())completionBlock {
+
+    // check if there is control info
+
+    // validate the control info
+
+    // create channels if necessary
 }
 
 - (NSArray*)allPlayers {
@@ -150,12 +185,12 @@
 
 - (void)removePlayer:(id)playerInfo
           completion:(void (^)())completionBlock {
-
+    
 }
 
 - (void)postChatMessage:(NSString*)message
              completion:(void (^)())completionBlock {
-
+    
 }
 
 - (void)sendPrivateMessage:(NSString*)message

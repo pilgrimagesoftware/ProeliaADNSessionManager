@@ -167,6 +167,7 @@
 		5B2AB8F31881F2CB006FE0F8 /* ADNSessionManager.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ADNSessionManager.entitlements; sourceTree = "<group>"; };
 		5B2AB9001881FA92006FE0F8 /* ETPSAAuthorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSAAuthorizer.h; sourceTree = "<group>"; };
 		5B2AB9011881FA92006FE0F8 /* ETPSAAuthorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSAAuthorizer.m; sourceTree = "<group>"; };
+		5B35336B188397AE0091337F /* libProeliaCore-Mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libProeliaCore-Mac.a"; path = "../../../../../../../../../../Library/Developer/Xcode/DerivedData/Proelia-ffmgcgvfypzhivemzhqzuundvlch/Build/Products/Debug/libProeliaCore-Mac.a"; sourceTree = "<group>"; };
 		5B832B241880FC4B004EE45A /* Snapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Snapper.xcodeproj; path = Libraries/Snapper/Snapper.xcodeproj; sourceTree = "<group>"; };
 		5B832B6118810CD0004EE45A /* Pilgrimage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pilgrimage.framework; path = ../../../../../../../../../sdk/Pilgrimage/1.0.6/Pilgrimage.framework; sourceTree = "<group>"; };
 		5BB63F33187CFFEA00461CCE /* ADNSessionManager.proeliaplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNSessionManager.proeliaplugin; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,6 +394,7 @@
 		5BDD37A2169BEA04009B0CC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B35336B188397AE0091337F /* libProeliaCore-Mac.a */,
 				5BE8E1AB18832A1100E0AD41 /* Security.framework */,
 				5BE8E1991883191D00E0AD41 /* CoreGraphics.framework */,
 				5B2AB89A1881EEAA006FE0F8 /* XPCKit.framework */,
@@ -845,6 +847,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "ADNSessionManagerPlugin/Resources/ADNSessionManagerPlugin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Proelia-ffmgcgvfypzhivemzhqzuundvlch/Build/Products/Debug",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = ADNSessionManager;
 				SKIP_INSTALL = YES;
@@ -873,6 +879,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "ADNSessionManagerPlugin/Resources/ADNSessionManagerPlugin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Proelia-ffmgcgvfypzhivemzhqzuundvlch/Build/Products/Debug",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = ADNSessionManager;
 				SKIP_INSTALL = YES;

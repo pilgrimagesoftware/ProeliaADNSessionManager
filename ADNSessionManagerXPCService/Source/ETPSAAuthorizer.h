@@ -12,13 +12,14 @@
 #import "ETPSACredentials.h"
 
 
+typedef void (^ETPSAAuthorizationCompletionHandler)(NSString* accessToken, SNPToken* token, NSError* error);
+
 @interface ETPSAAuthorizer : NSObject
 
 @property (strong, nonatomic) ETPSACredentials* credentials;
 
 - (instancetype)initWithCredentials:(ETPSACredentials*)credentials;
 
-- (NSString*)authorize:(SNPToken**)token
-                 error:(NSError**)errorPtr;
+- (void)authorize:(ETPSAAuthorizationCompletionHandler)handler;
 
 @end

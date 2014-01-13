@@ -11,26 +11,29 @@
 #import "ETPSAAuthorizer.h"
 
 
-@implementation ETPSASessionManagerService
+@implementation ETPSASessionManagerService {
+
+@private
+    ETPSAAuthorizer* _authorizer;
+
+}
 
 - (void)authorize:(ETPSACredentials*)credentials
-       completion:(void (^)(NSString* accessToken, NSString* username, NSError* error))completionBlock {
+       completion:(void (^)(NSString* accessToken, NSInteger userId, NSError* error))completionBlock {
 
     NSLog(@"Performing authorization with credentials: %@", credentials);
 
-    ETPSAAuthorizer* authorizer = [[ETPSAAuthorizer alloc] initWithCredentials:credentials];
+    _authorizer = [[ETPSAAuthorizer alloc] initWithCredentials:credentials];
 
-    NSError* error = nil;
-    SNPToken* token = nil;
-    NSString* accessToken = [authorizer authorize:&token
-                                            error:&error];
+    [_authorizer authorize:^(NSString *accessToken, SNPToken *token, NSError *error) {
 
-    if(accessToken && token) {
-        completionBlock(accessToken, token.user.username, nil);
-    }
-    else {
-        completionBlock(nil, nil, error);
-    }
+        if(accessToken && token) {
+            completionBlock(accessToken, token.user.userId, nil);
+        }
+        else {
+            completionBlock(nil, 0, error);
+        }
+    }];
 }
 
 @end

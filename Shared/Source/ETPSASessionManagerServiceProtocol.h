@@ -14,6 +14,6 @@
 @protocol ETPSASessionManagerService <NSObject>
 
 - (void)authorize:(ETPSACredentials*)credentials
-       completion:(void (^)(NSString* accessToken, NSString* username, NSError* error))completionBlock;
+       completion:(void (^)(NSString* accessToken, NSInteger userId, NSError* error))completionBlock;
 
 @end

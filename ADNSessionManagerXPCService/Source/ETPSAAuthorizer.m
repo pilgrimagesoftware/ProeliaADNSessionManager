@@ -27,38 +27,27 @@
     return self;
 }
 
-- (NSString*)authorize:(SNPToken**)token
-                 error:(NSError**)errorPtr {
+- (void)authorize:(ETPSAAuthorizationCompletionHandler)handler {
 
     NSLog(@"Authorizing...");
-
-    __block NSString* accessToken = nil;
 
     SNPPasswordLoginOperation* loginOp = [[SNPPasswordLoginOperation alloc] initWithClientId:_credentials.clientId
                                                                                  grantSecret:_credentials.grantSecret
                                                                                     username:_credentials.username
                                                                                     password:_credentials.password
                                                                                        scope:_credentials.scopes
-                                                                                 finishBlock:^(NSString* accessTokenString, SNPToken* tokenInfo, NSError* error) {
+                                                                                 finishBlock:^(NSString* accessToken, SNPToken* token, NSError* error) {
 
-                                                                                     NSLog(@"Response: accessTokenString: %@, tokenInfo: %@, error: %@", accessTokenString, tokenInfo, error);
+                                                                                     NSLog(@"Authorization response: accessToken: %@, token: %@, error: %@", accessToken, token, error);
 
-                                                                                     if(accessTokenString && tokenInfo) {
-                                                                                         accessToken = accessTokenString;
-                                                                                         if(token) {
-                                                                                             *token = tokenInfo;
-                                                                                         }
+                                                                                     if(accessToken && token) {
+                                                                                         handler(accessToken, token, nil);
                                                                                      }
                                                                                      else {
-                                                                                         if(errorPtr) {
-                                                                                             *errorPtr = error;
-                                                                                         }
+                                                                                         handler(nil, nil, error);
                                                                                      }
                                                                                  }];
     [_loginQueue addOperation:loginOp];
-    [loginOp waitUntilFinished];
-    
-    return accessToken;
 }
 
 @end

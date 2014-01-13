@@ -9,3 +9,7 @@
 #import "ETPSAConstants.h"
 
 NSString* const ProeliaKeychainServiceName = @"Proelia-App.net";
+
+NSString* const ETPSAControlChannelId = @"controlChannelId";
+NSString* const ETPSAInputChannelId = @"inputChannelId";
+NSString* const ETPSAChatChannelId = @"chatChannelId";
