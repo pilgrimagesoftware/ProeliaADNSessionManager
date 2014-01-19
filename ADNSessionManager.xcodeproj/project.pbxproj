@@ -38,6 +38,8 @@
 		5B832CCA188127AB004EE45A /* libSnapper-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B832CC71881279E004EE45A /* libSnapper-static.a */; };
 		5BB63F34187CFFEA00461CCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */; };
 		5BB63F45187D002700461CCE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB63F44187D002700461CCE /* XCTest.framework */; };
+		5BC7AEEF18860DA800B82551 /* ETPSASecurityContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7AEEE18860DA800B82551 /* ETPSASecurityContext.m */; };
+		5BC7AEF018860DA800B82551 /* ETPSASecurityContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7AEEE18860DA800B82551 /* ETPSASecurityContext.m */; };
 		5BE8E1661882F41F00E0AD41 /* ETPSAListenerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1651882F41F00E0AD41 /* ETPSAListenerDelegate.m */; };
 		5BE8E1711883054000E0AD41 /* ETPSACredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1701883054000E0AD41 /* ETPSACredentials.m */; };
 		5BE8E1721883054000E0AD41 /* ETPSACredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8E1701883054000E0AD41 /* ETPSACredentials.m */; };
@@ -173,6 +175,9 @@
 		5BB63F33187CFFEA00461CCE /* ADNSessionManager.proeliaplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNSessionManager.proeliaplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB63F43187D002700461CCE /* ADNSessionManagerPluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNSessionManagerPluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB63F44187D002700461CCE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5BC7AEED18860DA800B82551 /* ETPSASecurityContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSASecurityContext.h; sourceTree = "<group>"; };
+		5BC7AEEE18860DA800B82551 /* ETPSASecurityContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSASecurityContext.m; sourceTree = "<group>"; };
+		5BC7AEF61886206600B82551 /* libProeliaSDK-Mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libProeliaSDK-Mac.a"; path = "../../../../../../../../../../Library/Developer/Xcode/DerivedData/Proelia-ffmgcgvfypzhivemzhqzuundvlch/Build/Products/Debug/libProeliaSDK-Mac.a"; sourceTree = "<group>"; };
 		5BDD37A3169BEA04009B0CC6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5BDD37A6169BEA04009B0CC6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5BDD37A7169BEA04009B0CC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -394,6 +399,7 @@
 		5BDD37A2169BEA04009B0CC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BC7AEF61886206600B82551 /* libProeliaSDK-Mac.a */,
 				5B35336B188397AE0091337F /* libProeliaCore-Mac.a */,
 				5BE8E1AB18832A1100E0AD41 /* Security.framework */,
 				5BE8E1991883191D00E0AD41 /* CoreGraphics.framework */,
@@ -442,6 +448,8 @@
 				5BE8E1701883054000E0AD41 /* ETPSACredentials.m */,
 				5BE8E1A71883298A00E0AD41 /* ETPSAConstants.h */,
 				5BE8E1A81883298A00E0AD41 /* ETPSAConstants.m */,
+				5BC7AEED18860DA800B82551 /* ETPSASecurityContext.h */,
+				5BC7AEEE18860DA800B82551 /* ETPSASecurityContext.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -682,6 +690,7 @@
 				5BE8E1721883054000E0AD41 /* ETPSACredentials.m in Sources */,
 				5B2AB9021881FA92006FE0F8 /* ETPSAAuthorizer.m in Sources */,
 				5BE8E1AA1883298A00E0AD41 /* ETPSAConstants.m in Sources */,
+				5BC7AEF018860DA800B82551 /* ETPSASecurityContext.m in Sources */,
 				5BE8E1661882F41F00E0AD41 /* ETPSAListenerDelegate.m in Sources */,
 				5B2AB8F21881F179006FE0F8 /* main.m in Sources */,
 			);
@@ -695,6 +704,7 @@
 				5BE8E1A518831C2200E0AD41 /* SSKeychainQuery.m in Sources */,
 				5BE8E1A418831C2200E0AD41 /* SSKeychain.m in Sources */,
 				5BE8E1A91883298A00E0AD41 /* ETPSAConstants.m in Sources */,
+				5BC7AEEF18860DA800B82551 /* ETPSASecurityContext.m in Sources */,
 				5BE8E1711883054000E0AD41 /* ETPSACredentials.m in Sources */,
 				5B2AB8D51881F165006FE0F8 /* ETPSADNSessionManager.m in Sources */,
 			);
