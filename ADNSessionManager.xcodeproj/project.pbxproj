@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B086CD2188DE44700D896EB /* ETPSAParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B086CD1188DE44700D896EB /* ETPSAParticipant.m */; };
+		5B086CD3188DE44700D896EB /* ETPSAParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B086CD1188DE44700D896EB /* ETPSAParticipant.m */; };
+		5B086CDA188DE45000D896EB /* ETPSARegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B086CD9188DE45000D896EB /* ETPSARegion.m */; };
+		5B086CDB188DE45000D896EB /* ETPSARegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B086CD9188DE45000D896EB /* ETPSARegion.m */; };
+		5B086CDE188DE58600D896EB /* ETPSAMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B086CDD188DE58600D896EB /* ETPSAMap.m */; };
+		5B086CDF188DE58600D896EB /* ETPSAMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B086CDD188DE58600D896EB /* ETPSAMap.m */; };
+		5B086CE2188DE58F00D896EB /* ETPSAMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B086CE1188DE58F00D896EB /* ETPSAMapTile.m */; };
+		5B086CE3188DE58F00D896EB /* ETPSAMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B086CE1188DE58F00D896EB /* ETPSAMapTile.m */; };
 		5B2AB8891881EE8B006FE0F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2AB8881881EE8B006FE0F8 /* Foundation.framework */; };
 		5B2AB89E1881EEE2006FE0F8 /* Pilgrimage.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5B832B6118810CD0004EE45A /* Pilgrimage.framework */; };
 		5B2AB89F1881EEED006FE0F8 /* Pilgrimage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B832B6118810CD0004EE45A /* Pilgrimage.framework */; };
@@ -139,6 +147,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B086CD0188DE44700D896EB /* ETPSAParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSAParticipant.h; sourceTree = "<group>"; };
+		5B086CD1188DE44700D896EB /* ETPSAParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSAParticipant.m; sourceTree = "<group>"; };
+		5B086CD8188DE45000D896EB /* ETPSARegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSARegion.h; sourceTree = "<group>"; };
+		5B086CD9188DE45000D896EB /* ETPSARegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSARegion.m; sourceTree = "<group>"; };
+		5B086CDC188DE58600D896EB /* ETPSAMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSAMap.h; sourceTree = "<group>"; };
+		5B086CDD188DE58600D896EB /* ETPSAMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSAMap.m; sourceTree = "<group>"; };
+		5B086CE0188DE58F00D896EB /* ETPSAMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPSAMapTile.h; sourceTree = "<group>"; };
+		5B086CE1188DE58F00D896EB /* ETPSAMapTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPSAMapTile.m; sourceTree = "<group>"; };
 		5B2AB8871881EE8B006FE0F8 /* com.pilgrimagesoftware.proelia.xpc.ADNSessionManager.xpc */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = com.pilgrimagesoftware.proelia.xpc.ADNSessionManager.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2AB8881881EE8B006FE0F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5B2AB89A1881EEAA006FE0F8 /* XPCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XPCKit.framework; path = ../../../../../../../../../sdk/XPCKit/XPCKit.framework; sourceTree = "<group>"; };
@@ -443,13 +459,21 @@
 		5BE8E16D188304ED00E0AD41 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				5BE8E16E1883050D00E0AD41 /* ETPSASessionManagerServiceProtocol.h */,
-				5BE8E16F1883054000E0AD41 /* ETPSACredentials.h */,
-				5BE8E1701883054000E0AD41 /* ETPSACredentials.m */,
 				5BE8E1A71883298A00E0AD41 /* ETPSAConstants.h */,
 				5BE8E1A81883298A00E0AD41 /* ETPSAConstants.m */,
+				5BE8E16F1883054000E0AD41 /* ETPSACredentials.h */,
+				5BE8E1701883054000E0AD41 /* ETPSACredentials.m */,
+				5B086CDC188DE58600D896EB /* ETPSAMap.h */,
+				5B086CDD188DE58600D896EB /* ETPSAMap.m */,
+				5B086CE0188DE58F00D896EB /* ETPSAMapTile.h */,
+				5B086CE1188DE58F00D896EB /* ETPSAMapTile.m */,
+				5B086CD0188DE44700D896EB /* ETPSAParticipant.h */,
+				5B086CD1188DE44700D896EB /* ETPSAParticipant.m */,
+				5B086CD8188DE45000D896EB /* ETPSARegion.h */,
+				5B086CD9188DE45000D896EB /* ETPSARegion.m */,
 				5BC7AEED18860DA800B82551 /* ETPSASecurityContext.h */,
 				5BC7AEEE18860DA800B82551 /* ETPSASecurityContext.m */,
+				5BE8E16E1883050D00E0AD41 /* ETPSASessionManagerServiceProtocol.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -687,9 +711,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE8E1761883080100E0AD41 /* ETPSASessionManagerService.m in Sources */,
+				5B086CDB188DE45000D896EB /* ETPSARegion.m in Sources */,
+				5B086CD3188DE44700D896EB /* ETPSAParticipant.m in Sources */,
 				5BE8E1721883054000E0AD41 /* ETPSACredentials.m in Sources */,
 				5B2AB9021881FA92006FE0F8 /* ETPSAAuthorizer.m in Sources */,
 				5BE8E1AA1883298A00E0AD41 /* ETPSAConstants.m in Sources */,
+				5B086CE3188DE58F00D896EB /* ETPSAMapTile.m in Sources */,
+				5B086CDF188DE58600D896EB /* ETPSAMap.m in Sources */,
 				5BC7AEF018860DA800B82551 /* ETPSASecurityContext.m in Sources */,
 				5BE8E1661882F41F00E0AD41 /* ETPSAListenerDelegate.m in Sources */,
 				5B2AB8F21881F179006FE0F8 /* main.m in Sources */,
@@ -701,9 +729,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B2AB8D61881F165006FE0F8 /* ETPSALoginViewController.m in Sources */,
+				5B086CDA188DE45000D896EB /* ETPSARegion.m in Sources */,
+				5B086CD2188DE44700D896EB /* ETPSAParticipant.m in Sources */,
 				5BE8E1A518831C2200E0AD41 /* SSKeychainQuery.m in Sources */,
 				5BE8E1A418831C2200E0AD41 /* SSKeychain.m in Sources */,
 				5BE8E1A91883298A00E0AD41 /* ETPSAConstants.m in Sources */,
+				5B086CE2188DE58F00D896EB /* ETPSAMapTile.m in Sources */,
+				5B086CDE188DE58600D896EB /* ETPSAMap.m in Sources */,
 				5BC7AEEF18860DA800B82551 /* ETPSASecurityContext.m in Sources */,
 				5BE8E1711883054000E0AD41 /* ETPSACredentials.m in Sources */,
 				5B2AB8D51881F165006FE0F8 /* ETPSADNSessionManager.m in Sources */,

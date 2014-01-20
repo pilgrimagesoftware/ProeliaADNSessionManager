@@ -16,6 +16,11 @@
 #import <ProeliaCore/ETCConstants.h>
 #import <ProeliaCore/ETCVActiveEncounterService.h>
 
+#import "ETPSAParticipant.h"
+#import "ETPSARegion.h"
+#import "ETPSAMap.h"
+#import "ETPSAMapTile.h"
+
 #import "ETPSASessionManagerServiceProtocol.h"
 #import "ETPSAConstants.h"
 
@@ -75,12 +80,7 @@
             _securityContext.accessToken = accessToken;
             _securityContext.tokenType = @"Bearer";
 
-            NSXPCInterface* interface = [NSXPCInterface interfaceWithProtocol:@protocol(ETPSASessionManagerService)];
-            NSXPCConnection* connection = [[NSXPCConnection alloc] initWithServiceName:@"com.pilgrimagesoftware.proelia.xpc.ADNSessionManager"];
-            connection.remoteObjectInterface = interface;
-            [connection resume];
-
-            id<ETPSASessionManagerService> sessionManager = (id<ETPSASessionManagerService>)connection.remoteObjectProxy;
+            id<ETPSASessionManagerService> sessionManager = [self sessionManager];
             [sessionManager initializeSecurityContext:_securityContext
                                            completion:^(NSError* error) {
                                                if(error) {
@@ -112,10 +112,7 @@
     _loginView.loginHandler = ^BOOL(NSString* username, NSString* password) {
 
         // XPC call
-        NSXPCInterface* interface = [NSXPCInterface interfaceWithProtocol:@protocol(ETPSASessionManagerService)];
-        NSXPCConnection* connection = [[NSXPCConnection alloc] initWithServiceName:@"com.pilgrimagesoftware.proelia.xpc.ADNSessionManager"];
-        connection.remoteObjectInterface = interface;
-        [connection resume];
+        id<ETPSASessionManagerService> sessionManager = [self sessionManager];
 
         ETPSACredentials* credentials = [ETPSACredentials new];
         credentials.clientId = clientId;
@@ -124,7 +121,6 @@
         credentials.username = username;
         credentials.password = password;
 
-        id<ETPSASessionManagerService> sessionManager = (id<ETPSASessionManagerService>)connection.remoteObjectProxy;
         [sessionManager authorize:credentials
                        completion:^(ETPSASecurityContext* securityContext, NSError* error) {
 
@@ -166,31 +162,7 @@
        presentCredentialsView:_loginView.view];
 }
 
-//- (ETKMActiveEncounterSession*)createSession {
-//
-//    NSDictionary* controlInfoDict = (@{
-//                                       ETPSAControlChannelId : @"",
-//                                       ETPSAInputChannelId : @"",
-//                                       ETPSAChatChannelId : @"",
-//                                       });
-//    NSError* error = nil;
-//    NSData* controlInfoData = [NSJSONSerialization dataWithJSONObject:controlInfoDict
-//                                                              options:0
-//                                                                error:&error];
-//    if(controlInfoData == nil) {
-//        NSLog(@"Unable to serialize JSON data: %@", error);
-//        return nil;
-//    }
-//    NSString* controlInfo = [[NSString alloc] initWithData:controlInfoData
-//                                                  encoding:NSUTF8StringEncoding];
-//    ETKMActiveEncounterSession* session = [[ETCVActiveEncounterService sharedActiveEncounterService] createSessionForAccount:_account
-//                                                                                                                 controlInfo:controlInfo
-//                                                                                                                 inEncounter:_encounter];
-//
-//    return session;
-//}
-
-- (void)startSession:(void (^)(BOOL success, NSError* error))completionBlock {
+- (void)setupSession:(void (^)(BOOL success, NSError* error))completionBlock {
 
     // check if the encounter has an ID
     if(_encounter.encounterIdentifier == nil) {
@@ -200,11 +172,11 @@
     // check if there is control info
     ETKMActiveEncounterSession* session = _encounter.currentSession;
     if(session == nil) {
-        NSLog(@"Cannot start session; no current session set for encounter: %@", _encounter);
+        NSLog(@"Cannot setup session; no current session set for encounter: %@", _encounter);
         NSError* error = [NSError errorWithDomain:ETPSAErrorDomain
                                              code:ETPSAErrorCodeInvalidSession
                                          userInfo:(@{
-                                                     ETPSAErrorMessage : @"Cannot start session; no current session set for encounter",
+                                                     ETPSAErrorMessage : @"Cannot setup session; no current session set for encounter",
                                                      ETPSAErrorEncounter : _encounter,
                                                      })];
         completionBlock(NO, error);
@@ -241,7 +213,7 @@
 
         if(![self validateChannel:[updatedControlInfo[ETPSAControlChannelId] integerValue]
                              type:ProeliaChannelTypeControl
-             sessionIdentifier:session.sessionIdentifier
+                sessionIdentifier:session.sessionIdentifier
               encounterIdentifier:_encounter.encounterIdentifier]) {
             NSLog(@"Validation check failed for control channel '%@'; marking for replacement.", updatedControlInfo[ETPSAControlChannelId]);
             [updatedControlInfo removeObjectForKey:ETPSAControlChannelId];
@@ -292,6 +264,103 @@
     }
 }
 
+- (void)startSession:(void (^)(BOOL success, NSError* error))completionBlock {
+
+    id<ETPSASessionManagerService> sessionManager = [self sessionManager];
+
+    // populate the session channel with information about the encounter
+    NSError* error = nil;
+
+    // if there is already information in the channel, send a reset
+    if(![sessionManager resetIfNecessary:&error]) {
+        completionBlock(NO, error);
+    }
+
+    // upload files for maps
+    for(ETKMActiveMap* map in _encounter.maps) {
+
+        // background
+        NSString* backgroundName = [NSString stringWithFormat:@"Proelia/encounter/%@/map/%@/background", _encounter.encounterIdentifier, map.name];
+        error = nil;
+        if(![sessionManager uploadFile:backgroundName
+                                  data:map.backgroundData
+                                 error:&error]) {
+            completionBlock(NO, error);
+        }
+
+        // tiles
+        for(ETKMActiveMapTile* tile in map.tiles) {
+            NSString* tileName = [NSString stringWithFormat:@"Proelia/encounter/%@/map/%@/tile", _encounter.encounterIdentifier, map.name, tile.name];
+            error = nil;
+            if(![sessionManager uploadFile:tileName
+                                      data:tile.data
+                                     error:&error]) {
+                completionBlock(NO, error);
+            }
+        }
+    }
+
+    // upload files for tokens
+    for(ETKMActiveParticipant* participant in _encounter.participants) {
+        NSString* tokenName = [NSString stringWithFormat:@"Proelia/encounter/%@/participant/%@/token", _encounter.encounterIdentifier, participant.name];
+        error = nil;
+        if(![sessionManager uploadFile:tokenName
+                                  data:participant.image
+                                 error:&error]) {
+            completionBlock(NO, error);
+        }
+    }
+
+    // send information about each of the participants and regions
+    for(ETKMActiveParticipant* participant in _encounter.participants) {
+        ETPSAParticipant* participantInfo = [self packageParticipant:participant];
+        error = nil;
+        if(![sessionManager sendParticipantInfo:participantInfo
+                                          error:&error]) {
+            completionBlock(NO, error);
+        }
+    }
+    for(ETKMActiveRegion* region in _encounter.regions) {
+        ETPSARegion* regionInfo = [self packageRegion:region];
+        error = nil;
+        if(![sessionManager sendRegionInfo:regionInfo
+                                     error:&error]) {
+            completionBlock(NO, error);
+        }
+    }
+
+    // send information about the map
+    // - size (width/height/depth)
+    // - background
+    // - tiles (image, location, size)
+    for(ETKMActiveMap* map in _encounter.maps) {
+
+        NSString* backgroundName = [NSString stringWithFormat:@"Proelia/encounter/%@/map/%@/background", _encounter.encounterIdentifier, map.name];
+        ETPSAMap* mapInfo = [self packageMap:map];
+        mapInfo.backgroundFileName = backgroundName;
+
+        error = nil;
+        if(![sessionManager sendMapInfo:mapInfo
+                                 error:&error]) {
+            completionBlock(NO, error);
+        }
+
+        // tiles
+        for(ETKMActiveMapTile* tile in map.tiles) {
+
+            NSString* tileName = [NSString stringWithFormat:@"Proelia/encounter/%@/map/%@/tile", _encounter.encounterIdentifier, map.name, tile.name];
+            ETPSAMapTile* tileInfo = [self packageMapTile:tile];
+            tileInfo.tileFileName = tileName;
+
+            error = nil;
+            if(![sessionManager sendTileInfo:tileInfo
+                                     error:&error]) {
+                completionBlock(NO, error);
+            }
+        }
+    }
+}
+
 - (void)stopSession:(void (^)(NSError* error))completionBlock {
 
     // TODO: other stuff (delete/unsubscribe channels?)
@@ -337,6 +406,34 @@
 
 #pragma mark - Worker methods
 
+- (id<ETPSASessionManagerService>)sessionManager {
+
+    NSXPCInterface* interface = [NSXPCInterface interfaceWithProtocol:@protocol(ETPSASessionManagerService)];
+    NSXPCConnection* connection = [[NSXPCConnection alloc] initWithServiceName:@"com.pilgrimagesoftware.proelia.xpc.ADNSessionManager"];
+    connection.remoteObjectInterface = interface;
+    [connection resume];
+
+    id<ETPSASessionManagerService> sessionManager = (id<ETPSASessionManagerService>)connection.remoteObjectProxy;
+
+    return sessionManager;
+}
+
+- (ETPSAParticipant*)packageParticipant:(ETKMActiveParticipant*)participant {
+
+}
+
+- (ETPSARegion*)packageRegion:(ETKMActiveRegion*)region {
+
+}
+
+- (ETPSAMap*)packageMap:(ETKMActiveMap*)map {
+
+}
+
+- (ETPSAMapTile*)packageMapTile:(ETKMActiveMapTile*)tile {
+
+}
+
 - (BOOL)validateChannel:(NSInteger)channelId
                    type:(NSString*)type
       sessionIdentifier:(NSString*)sessionId
@@ -349,12 +446,7 @@
         return NO;
     }
 
-    NSXPCInterface* interface = [NSXPCInterface interfaceWithProtocol:@protocol(ETPSASessionManagerService)];
-    NSXPCConnection* connection = [[NSXPCConnection alloc] initWithServiceName:@"com.pilgrimagesoftware.proelia.xpc.ADNSessionManager"];
-    connection.remoteObjectInterface = interface;
-    [connection resume];
-
-    id<ETPSASessionManagerService> sessionManager = (id<ETPSASessionManagerService>)connection.remoteObjectProxy;
+    id<ETPSASessionManagerService> sessionManager = [self sessionManager];
 
     NSLock* validationLock = [NSLock new];
     __block BOOL done = NO;
@@ -394,12 +486,7 @@
 - (BOOL)createChannelsIfNecessary:(NSString*)sessionId
                       controlInfo:(NSMutableDictionary*)controlInfo {
 
-    NSXPCInterface* interface = [NSXPCInterface interfaceWithProtocol:@protocol(ETPSASessionManagerService)];
-    NSXPCConnection* connection = [[NSXPCConnection alloc] initWithServiceName:@"com.pilgrimagesoftware.proelia.xpc.ADNSessionManager"];
-    connection.remoteObjectInterface = interface;
-    [connection resume];
-
-    id<ETPSASessionManagerService> sessionManager = (id<ETPSASessionManagerService>)connection.remoteObjectProxy;
+    id<ETPSASessionManagerService> sessionManager = [self sessionManager];
 
     NSLock* controlLock = [NSLock new];
     __block BOOL abort = NO;
@@ -490,7 +577,7 @@
                                    }
                                    return;
                                }
-                               
+
                                @synchronized(controlLock) {
                                    controlInfo[ETPSAChatChannelId] = @(channelId);
                                }
