@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ETPSACredentials.h"
-#import "ETPSASecurityContext.h"
 
+@class ETPSACredentials, ETPSASecurityContext;
+@class ETPSAParticipant, ETPSARegion;
+@class ETPSAMap, ETPSAMapTile;
 
 @protocol ETPSASessionManagerService <NSObject>
 
@@ -20,7 +21,7 @@
 - (void)authorize:(ETPSACredentials*)credentials
        completion:(void (^)(ETPSASecurityContext* securityContext, NSError* error))completionBlock;
 /**
- * Finish setting up the provided security context, such as filling in the apiId property, if 
+ * Finish setting up the provided security context, such as filling in the apiId property, if
  * needed.
  */
 - (void)initializeSecurityContext:(ETPSASecurityContext*)securityContext
@@ -44,5 +45,34 @@
     encounterIdentifier:(NSString*)encounterId
         securityContext:(ETPSASecurityContext*)securityContext
              completion:(void (^)(BOOL valid, NSError* error))completionBlock;
+
+- (void)resetIfNecessary:(NSInteger)channelId
+         securityContext:(ETPSASecurityContext*)securityContext
+              completion:(void (^)(BOOL success, NSError* error))completionBlock;
+
+- (void)uploadFile:(NSString*)name
+              data:(NSData*)data
+   securityContext:(ETPSASecurityContext*)securityContext
+        completion:(void (^)(BOOL success, NSError* error))completionBlock;
+
+- (void)sendParticipantInfo:(ETPSAParticipant*)participantInfo
+                    channel:(NSInteger)channelId
+            securityContext:(ETPSASecurityContext*)securityContext
+                 completion:(void (^)(BOOL success, NSError* error))completionBlock;
+
+- (void)sendRegionInfo:(ETPSARegion*)regionInfo
+               channel:(NSInteger)channelId
+       securityContext:(ETPSASecurityContext*)securityContext
+            completion:(void (^)(BOOL success, NSError* error))completionBlock;
+
+- (void)sendMapInfo:(ETPSAMap*)mapInfo
+            channel:(NSInteger)channelId
+    securityContext:(ETPSASecurityContext*)securityContext
+         completion:(void (^)(BOOL success, NSError* error))completionBlock;
+
+- (void)sendTileInfo:(ETPSAMapTile*)tileInfo
+             channel:(NSInteger)channelId
+     securityContext:(ETPSASecurityContext*)securityContext
+          completion:(void (^)(BOOL success, NSError* error))completionBlock;
 
 @end
