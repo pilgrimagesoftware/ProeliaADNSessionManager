@@ -268,65 +268,60 @@
 
     id<ETPSASessionManagerService> sessionManager = [self sessionManager];
 
-    // populate the session channel with information about the encounter
-    NSError* error = nil;
+    // populate the session control channel with information about the encounter
 
     // if there is already information in the channel, send a reset
-    if(![sessionManager resetIfNecessary:&error]) {
-        completionBlock(NO, error);
-    }
+    [sessionManager resetIfNecessary:^(BOOL success, NSError* error) {
+        completionBlock(success, error);
+    }];
 
     // upload files for maps
     for(ETKMActiveMap* map in _encounter.maps) {
 
         // background
         NSString* backgroundName = [NSString stringWithFormat:@"Proelia/encounter/%@/map/%@/background", _encounter.encounterIdentifier, map.name];
-        error = nil;
-        if(![sessionManager uploadFile:backgroundName
+[sessionManager uploadFile:backgroundName
                                   data:map.backgroundData
-                                 error:&error]) {
+                completion:^(BOOL success, NSError* error) {
             completionBlock(NO, error);
-        }
+                }];
 
         // tiles
         for(ETKMActiveMapTile* tile in map.tiles) {
-            NSString* tileName = [NSString stringWithFormat:@"Proelia/encounter/%@/map/%@/tile", _encounter.encounterIdentifier, map.name, tile.name];
-            error = nil;
-            if(![sessionManager uploadFile:tileName
+            NSString* name = tile.name ?: [[NSUUID UUID] UUIDString];
+            NSString* tileName = [NSString stringWithFormat:@"Proelia/encounter/%@/map/%@/tile/%@", _encounter.encounterIdentifier, map.name, name];
+            [sessionManager uploadFile:tileName
                                       data:tile.data
-                                     error:&error]) {
+                completion:^(BOOL success, NSError* error) {
                 completionBlock(NO, error);
-            }
+                }];
         }
     }
 
     // upload files for tokens
     for(ETKMActiveParticipant* participant in _encounter.participants) {
         NSString* tokenName = [NSString stringWithFormat:@"Proelia/encounter/%@/participant/%@/token", _encounter.encounterIdentifier, participant.name];
-        error = nil;
-        if(![sessionManager uploadFile:tokenName
+        [sessionManager uploadFile:tokenName
                                   data:participant.image
-                                 error:&error]) {
+                        completion:^(BOOL success, NSError* error) {
             completionBlock(NO, error);
-        }
+                        }];
     }
 
     // send information about each of the participants and regions
     for(ETKMActiveParticipant* participant in _encounter.participants) {
         ETPSAParticipant* participantInfo = [self packageParticipant:participant];
-        error = nil;
-        if(![sessionManager sendParticipantInfo:participantInfo
-                                          error:&error]) {
+        [sessionManager sendParticipantInfo:participantInfo
+                completion:^(BOOL success, NSError* error) {
             completionBlock(NO, error);
-        }
+                }];
     }
     for(ETKMActiveRegion* region in _encounter.regions) {
         ETPSARegion* regionInfo = [self packageRegion:region];
-        error = nil;
-        if(![sessionManager sendRegionInfo:regionInfo
-                                     error:&error]) {
+        [sessionManager sendRegionInfo:regionInfo
+                        completion:^(BOOL success, NSError* error) {
             completionBlock(NO, error);
-        }
+                        }];
     }
 
     // send information about the map
@@ -339,24 +334,23 @@
         ETPSAMap* mapInfo = [self packageMap:map];
         mapInfo.backgroundFileName = backgroundName;
 
-        error = nil;
-        if(![sessionManager sendMapInfo:mapInfo
-                                 error:&error]) {
+        [sessionManager sendMapInfo:mapInfo
+                completion:^(BOOL success, NSError* error) {
             completionBlock(NO, error);
-        }
+                }];
 
         // tiles
         for(ETKMActiveMapTile* tile in map.tiles) {
 
-            NSString* tileName = [NSString stringWithFormat:@"Proelia/encounter/%@/map/%@/tile", _encounter.encounterIdentifier, map.name, tile.name];
+            NSString* name = tile.name ?: [[NSUUID UUID] UUIDString];
+            NSString* tileName = [NSString stringWithFormat:@"Proelia/encounter/%@/map/%@/tile/%@", _encounter.encounterIdentifier, map.name, name];
             ETPSAMapTile* tileInfo = [self packageMapTile:tile];
             tileInfo.tileFileName = tileName;
 
-            error = nil;
-            if(![sessionManager sendTileInfo:tileInfo
-                                     error:&error]) {
+            [sessionManager sendTileInfo:tileInfo
+                            completion:^(BOOL success, NSError* error) {
                 completionBlock(NO, error);
-            }
+                            }];
         }
     }
 }
@@ -495,6 +489,7 @@
     if(controlInfo[ETPSAControlChannelId] == nil) {
         // - writable by GM (immutable)
         // - readable by user IDs (mutable)
+        NSLog(@"No channel ID is set for the control channel; submitting task to create it.");
         [sessionManager createChannel:sessionId
                         encounterName:_encounter.name
                            gameSystem:_encounter.gameSystemName
@@ -516,6 +511,7 @@
                                    return;
                                }
 
+                               NSLog(@"Control channel created with ID: %ld", (long)channelId);
                                @synchronized(controlLock) {
                                    controlInfo[ETPSAControlChannelId] = @(channelId);
                                }
@@ -526,6 +522,7 @@
     if(controlInfo[ETPSAInputChannelId] == nil) {
         // - writable by any user (immutable)
         // - readable by GM (immutable)
+        NSLog(@"No channel ID is set for the input channel; submitting task to create it.");
         [sessionManager createChannel:sessionId
                         encounterName:_encounter.name
                            gameSystem:_encounter.gameSystemName
@@ -547,6 +544,7 @@
                                    return;
                                }
 
+                               NSLog(@"Input channel created with ID: %ld", (long)channelId);
                                @synchronized(controlLock) {
                                    controlInfo[ETPSAInputChannelId] = @(channelId);
                                }
@@ -557,6 +555,7 @@
     if(controlInfo[ETPSAChatChannelId] == nil) {
         // - writable by user IDs (mutable)
         // - readable by user IDs (mutable)
+        NSLog(@"No channel ID is set for the chat channel; submitting task to create it.");
         [sessionManager createChannel:sessionId
                         encounterName:_encounter.name
                            gameSystem:_encounter.gameSystemName
@@ -578,6 +577,7 @@
                                    return;
                                }
 
+                               NSLog(@"Chat channel created with ID: %ld", (long)channelId);
                                @synchronized(controlLock) {
                                    controlInfo[ETPSAChatChannelId] = @(channelId);
                                }
@@ -587,19 +587,25 @@
     // spin-lock and wait for channel creation to finish, or abort
     for(;;) {
         // sleep for half a second
+        NSLog(@"Sleeping for .5 seconds.");
         [NSThread sleepForTimeInterval:.5];
-        
+
+        NSLog(@"Checking for status of channel creation.");
         @synchronized(controlLock) {
             
             // check abort
-            if(abort)
+            if(abort) {
+                NSLog(@"A channel creation task set the abort flag.");
                 break;
+            }
             
             // check channels
             if(controlInfo[ETPSAControlChannelId] &&
                controlInfo[ETPSAInputChannelId] &&
-               controlInfo[ETPSAChatChannelId])
+               controlInfo[ETPSAChatChannelId]) {
+                NSLog(@"All channels were created: %@", controlInfo);
                 break;
+            }
         }
     }
     
