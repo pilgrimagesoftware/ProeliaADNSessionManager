@@ -11,4 +11,11 @@
 
 @interface ETPSAMapTile : NSObject <NSSecureCoding>
 
+@property (nonatomic, assign) NSInteger x;
+@property (nonatomic, assign) NSInteger y;
+@property (nonatomic, assign) NSInteger z;
+@property (nonatomic, assign) CGFloat scale;
+@property (nonatomic, copy) NSString* name;
+@property (nonatomic, copy) NSString* file;
+
 @end

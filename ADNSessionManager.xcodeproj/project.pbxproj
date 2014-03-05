@@ -252,6 +252,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B15D1E01894276F00D41E25 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				5B086CDC188DE58600D896EB /* ETPSAMap.h */,
+				5B086CDD188DE58600D896EB /* ETPSAMap.m */,
+				5B086CE0188DE58F00D896EB /* ETPSAMapTile.h */,
+				5B086CE1188DE58F00D896EB /* ETPSAMapTile.m */,
+				5B086CD0188DE44700D896EB /* ETPSAParticipant.h */,
+				5B086CD1188DE44700D896EB /* ETPSAParticipant.m */,
+				5B086CD8188DE45000D896EB /* ETPSARegion.h */,
+				5B086CD9188DE45000D896EB /* ETPSARegion.m */,
+			);
+			name = DTOs;
+			sourceTree = "<group>";
+		};
+		5B15D1E51894277D00D41E25 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				5BE8E16F1883054000E0AD41 /* ETPSACredentials.h */,
+				5BE8E1701883054000E0AD41 /* ETPSACredentials.m */,
+				5BC7AEED18860DA800B82551 /* ETPSASecurityContext.h */,
+				5BC7AEEE18860DA800B82551 /* ETPSASecurityContext.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
 		5B2AB8B51881F165006FE0F8 /* ADNSessionManagerPlugin */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,18 +487,8 @@
 			children = (
 				5BE8E1A71883298A00E0AD41 /* ETPSAConstants.h */,
 				5BE8E1A81883298A00E0AD41 /* ETPSAConstants.m */,
-				5BE8E16F1883054000E0AD41 /* ETPSACredentials.h */,
-				5BE8E1701883054000E0AD41 /* ETPSACredentials.m */,
-				5B086CDC188DE58600D896EB /* ETPSAMap.h */,
-				5B086CDD188DE58600D896EB /* ETPSAMap.m */,
-				5B086CE0188DE58F00D896EB /* ETPSAMapTile.h */,
-				5B086CE1188DE58F00D896EB /* ETPSAMapTile.m */,
-				5B086CD0188DE44700D896EB /* ETPSAParticipant.h */,
-				5B086CD1188DE44700D896EB /* ETPSAParticipant.m */,
-				5B086CD8188DE45000D896EB /* ETPSARegion.h */,
-				5B086CD9188DE45000D896EB /* ETPSARegion.m */,
-				5BC7AEED18860DA800B82551 /* ETPSASecurityContext.h */,
-				5BC7AEEE18860DA800B82551 /* ETPSASecurityContext.m */,
+				5B15D1E51894277D00D41E25 /* Security */,
+				5B15D1E01894276F00D41E25 /* DTOs */,
 				5BE8E16E1883050D00E0AD41 /* ETPSASessionManagerServiceProtocol.h */,
 			);
 			path = Source;

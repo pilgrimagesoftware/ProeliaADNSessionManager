@@ -11,4 +11,9 @@
 
 @interface ETPSAParticipant : NSObject <NSSecureCoding>
 
+@property (nonatomic, copy) NSString* color;
+@property (nonatomic, copy) NSInteger x;
+@property (nonatomic, copy) NSInteger y;
+@property (nonatomic, copy) NSInteger z;
+
 @end

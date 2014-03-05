@@ -11,4 +11,14 @@
 
 @interface ETPSARegion : NSObject <NSSecureCoding>
 
+@property (nonatomic, copy) NSString* name;
+@property (nonatomic, assign) NSInteger x;
+@property (nonatomic, assign) NSInteger y;
+@property (nonatomic, assign) NSInteger z;
+@property (nonatomic, assign) NSInteger width;
+@property (nonatomic, assign) NSInteger height;
+@property (nonatomic, assign) NSInteger depth;
+@property (nonatomic, copy) NSString* color;
+@property (nonatomic, copy) NSString* conditions;
+
 @end

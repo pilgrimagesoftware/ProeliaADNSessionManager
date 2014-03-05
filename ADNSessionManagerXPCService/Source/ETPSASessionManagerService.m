@@ -11,6 +11,12 @@
 #import <Snapper/Snapper.h>
 
 #import "ETPSAAuthorizer.h"
+
+#import "ETPSAParticipant.h"
+#import "ETPSARegion.h"
+#import "ETPSAMap.h"
+#import "ETPSAMapTile.h"
+
 #import "ETPSAConstants.h"
 
 
@@ -267,6 +273,72 @@
                                                                                 completionBlock(YES, nil);
                                                                             }];
     [_operationQueue addOperation:fetchOp];
+}
+
+- (void)resetIfNecessary:(NSInteger)channelId
+         securityContext:(ETPSASecurityContext*)securityContext
+              completion:(void (^)(BOOL success, NSError* error))completionBlock {
+
+    NSString* accountId = [self resolveAccountId:securityContext];
+
+    NSLog(@"Calling ADN get channel API with account: %@", accountId);
+    SNPGetChannelOperation* fetchOp = [[SNPGetChannelOperation alloc] initWithChannelId:channelId
+                                                                              accountId:accountId
+                                                                            finishBlock:^(SNPResponse *response) {
+
+                                                                                if(response.metadata.errorId) {
+                                                                                    NSLog(@"Error while invoking ADN get channel API: %@", response.metadata.errorId);
+                                                                                    NSError* error = [NSError errorWithDomain:ETPSAErrorDomain
+                                                                                                                         code:[response.metadata.errorId integerValue]
+                                                                                                                     userInfo:(@{
+                                                                                                                                 ETPSAErrorMessage : response.metadata.errorMessage,
+                                                                                                                                 })];
+
+                                                                                    completionBlock(NO, error);
+                                                                                    return;
+                                                                                }
+
+                                                                                SNPChannel* channel = response.data;
+                                                                                NSLog(@"Got channel: %@", channel);
+
+                                                                                NSInteger messageCount = channel.
+                                                                            }];
+    [_operationQueue addOperation:fetchOp];
+}
+
+- (void)uploadFile:(NSString*)name
+              data:(NSData*)data
+   securityContext:(ETPSASecurityContext*)securityContext
+        completion:(void (^)(BOOL success, NSError* error))completionBlock {
+
+}
+
+- (void)sendParticipantInfo:(ETPSAParticipant*)participantInfo
+                    channel:(NSInteger)channelId
+            securityContext:(ETPSASecurityContext*)securityContext
+                 completion:(void (^)(BOOL success, NSError* error))completionBlock {
+
+}
+
+- (void)sendRegionInfo:(ETPSARegion*)regionInfo
+               channel:(NSInteger)channelId
+       securityContext:(ETPSASecurityContext*)securityContext
+            completion:(void (^)(BOOL success, NSError* error))completionBlock {
+
+}
+
+- (void)sendMapInfo:(ETPSAMap*)mapInfo
+            channel:(NSInteger)channelId
+    securityContext:(ETPSASecurityContext*)securityContext
+         completion:(void (^)(BOOL success, NSError* error))completionBlock {
+
+}
+
+- (void)sendTileInfo:(ETPSAMapTile*)tileInfo
+             channel:(NSInteger)channelId
+     securityContext:(ETPSASecurityContext*)securityContext
+          completion:(void (^)(BOOL success, NSError* error))completionBlock {
+
 }
 
 

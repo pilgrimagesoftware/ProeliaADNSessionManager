@@ -11,4 +11,10 @@
 
 @interface ETPSAMap : NSObject <NSSecureCoding>
 
+@property (nonatomic, assign) NSInteger width;
+@property (nonatomic, assign) NSInteger height;
+@property (nonatomic, assign) NSInteger depth;
+@property (nonatomic, copy) NSString* backgroundFile;
+@property (nonatomic, assign) CGFloat backgroundScale;
+
 @end
